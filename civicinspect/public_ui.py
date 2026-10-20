@@ -87,7 +87,7 @@ def render_public_lookup_page() -> str:
     <article class="panel large"><p class="kicker">Boundary</p><h2>No official inspection action</h2><div class="result warning"><p>CivicInspect does not issue official findings, citations, fines, notices, inspection schedules, or system-of-record updates.</p></div></article>
   </section>
 </main>
-<footer><p>CivicInspect is part of the Apache 2.0 CivicSuite open-source municipal AI project.</p></footer>
+<footer><p>CivicInspect is part of the AGPL-3.0 CivicSuite open-source municipal AI project.</p></footer>
 <script>
   const result = document.querySelector("#result");
   const button = document.querySelector("#draft-button");

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 """Run the release gate for the Agent Pipeline for Codex plugin.
 
 This is the command that proves the install surface, not only the source tree.
