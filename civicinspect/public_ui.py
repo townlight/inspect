@@ -11,7 +11,7 @@ def render_public_lookup_page() -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CivicInspect Inspection Support</title>
+<title>Townlight Inspections Inspection Support</title>
 <style>
   :root { --ink:#17202a; --muted:#526170; --paper:#fffaf2; --blue:#174f68; --green:#27604b; --gold:#d8ad48; --line:#d8c7a5; --warn:#8f4a2b; }
   * { box-sizing: border-box; }
@@ -54,9 +54,9 @@ def render_public_lookup_page() -> str:
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header>
-  <p class="eyebrow">CivicSuite / CivicInspect public sample</p>
+  <p class="eyebrow">Townlight / Townlight Inspections public sample</p>
   <h1>Turn field notes into review-ready inspection drafts.</h1>
-  <p class="lede">CivicInspect demonstrates inspection support: sample repeat-case lookup, inspector-owned report drafting, notice draft support, staff review queues, CivicCode context packets, and records-ready exports without issuing findings or replacing the system of record.</p>
+  <p class="lede">Townlight Inspections demonstrates inspection support: sample repeat-case lookup, inspector-owned report drafting, notice draft support, staff review queues, Townlight Code context packets, and records-ready exports without issuing findings or replacing the system of record.</p>
   <p><span class="badge">v0.2.2 inspection support + staff review queues</span></p>
 </header>
 <main id="main" tabindex="-1">
@@ -80,14 +80,14 @@ def render_public_lookup_page() -> str:
         <p>Enter property notes and create a review-required draft. Use "100 Main Street" or "42 Oak Avenue" to show sample repeat-case context.</p>
       </div>
     </article>
-    <article class="panel"><p class="kicker">Inspector-owned</p><h2>Humans decide</h2><div class="result"><p>Every draft is explicitly marked for inspector review; CivicInspect does not make findings, issue citations, or assess fines.</p></div></article>
+    <article class="panel"><p class="kicker">Inspector-owned</p><h2>Humans decide</h2><div class="result"><p>Every draft is explicitly marked for inspector review; Townlight Inspections does not make findings, issue citations, or assess fines.</p></div></article>
     <article class="panel"><p class="kicker">Notice support</p><h2>Draft, not issuance</h2><div class="result"><p>Notice drafts list required staff actions: confirm code section, ownership, address, and repeat-case context.</p></div></article>
     <article class="panel"><p class="kicker">Staff queue</p><h2>Route review work</h2><div class="result"><p>Persisted draft reports can be routed to staff-only review queues with status, assignment, and resolution records.</p></div></article>
     <article class="panel"><p class="kicker">Records-ready export</p><h2>Keep provenance</h2><div class="result"><p>Exports preserve notes, draft text, reviewer, queue status, review date, and system-of-record links.</p></div></article>
-    <article class="panel large"><p class="kicker">Boundary</p><h2>No official inspection action</h2><div class="result warning"><p>CivicInspect does not issue official findings, citations, fines, notices, inspection schedules, or system-of-record updates.</p></div></article>
+    <article class="panel large"><p class="kicker">Boundary</p><h2>No official inspection action</h2><div class="result warning"><p>Townlight Inspections does not issue official findings, citations, fines, notices, inspection schedules, or system-of-record updates.</p></div></article>
   </section>
 </main>
-<footer><p>CivicInspect is part of the AGPL-3.0 CivicSuite open-source municipal AI project.</p></footer>
+<footer><p>Townlight Inspections is part of the AGPL-3.0 Townlight open-source municipal AI project.</p></footer>
 <script>
   const result = document.querySelector("#result");
   const button = document.querySelector("#draft-button");

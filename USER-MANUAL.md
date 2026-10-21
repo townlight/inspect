@@ -1,12 +1,14 @@
-# CivicInspect User Manual
+<a id="civicinspect-user-manual"></a>
 
-CivicInspect helps inspection staff turn field notes into review-ready inspection drafts while preserving staff control over every decision.
+# Townlight Inspections User Manual
 
-Current state: CivicInspect v0.2.2 corrective demotion state. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression, with the CivicCore pin unchanged. The module includes deterministic sample checks, optional database-backed repeat-case and report-draft records, staff review queue workflows, review-required CivicCode/case context packet support, adversarial local integration mocks, CivicCore v1.1.0 release-wheel alignment, and a public sample UI at `/civicinspect`.
+Townlight Inspections helps inspection staff turn field notes into review-ready inspection drafts while preserving staff control over every decision.
+
+Current state: Townlight Inspections v0.2.2 corrective demotion state. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression, with the Townlight Core pin unchanged. The module includes deterministic sample checks, optional database-backed repeat-case and report-draft records, staff review queue workflows, review-required CivicCode/case context packet support, adversarial local integration mocks, Townlight Core v1.1.0 release-wheel alignment, and a public sample UI at `/civicinspect`.
 
 ## Runtime Surface
 
-CivicInspect is a FastAPI Python package pinned to the published `civiccore v1.1.0` release wheel. The runtime exposes:
+Townlight Inspections is a FastAPI Python package pinned to the published `civiccore v1.1.0` release wheel. The runtime exposes:
 
 - repeat-case lookup,
 - inspector-owned report draft creation,
@@ -29,7 +31,7 @@ This local API-key gate is a release safeguard, not a replacement for production
 
 ## Product Boundary
 
-CivicInspect does not issue official findings, citations, fines, notices, inspection schedules, legal advice, live photo analysis, live LLM calls, or system-of-record updates.
+Townlight Inspections does not issue official findings, citations, fines, notices, inspection schedules, legal advice, live photo analysis, live LLM calls, or system-of-record updates.
 
 ## Architecture
 
@@ -41,4 +43,4 @@ flowchart LR
   CivicInspect --> DB["Optional case database"]
 ```
 
-CivicInspect depends on CivicCore. CivicCore does not depend on CivicInspect. CivicInspect v0.2.2 uses deterministic sample data plus optional staff-gated persistence, review-required context packets for released CivicCode references, staff review queue records, and adversarial local mocks for integration-depth validation.
+Townlight Inspections depends on Townlight Core. Townlight Core does not depend on Townlight Inspections. Townlight Inspections v0.2.2 uses deterministic sample data plus optional staff-gated persistence, review-required context packets for released Townlight Code references, staff review queue records, and adversarial local mocks for integration-depth validation.

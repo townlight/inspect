@@ -24,9 +24,9 @@ from civicinspect.report_draft import draft_inspection_report
 
 
 app = FastAPI(
-    title="CivicInspect",
+    title='Townlight Inspections',
     version=__version__,
-    description="Inspection report, repeat-case, notice-drafting, and staff-review support for CivicSuite.",
+    description='Inspection report, repeat-case, notice-drafting, and staff-review support for Townlight.',
 )
 
 _case_repository: InspectionCaseRepository | None = None
