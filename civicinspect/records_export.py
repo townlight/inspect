@@ -1,4 +1,4 @@
-"""Records-ready export helpers for CivicInspect."""
+"""Records-ready export helpers for Townlight Inspections."""
 
 from __future__ import annotations
 

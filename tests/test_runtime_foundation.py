@@ -25,7 +25,7 @@ def test_root_endpoint_states_runtime_boundary() -> None:
     assert payload["version"] == "0.2.2"
     assert payload["status"] == "inspection support product with staff review queues"
     assert "staff review queues" in payload["message"]
-    assert "CivicCode context packets" in payload["message"]
+    assert "Townlight Code context packets" in payload["message"]
     assert "official findings" in payload["message"]
     assert "not implemented" in payload["message"]
     assert "CIVICINSPECT_STAFF_API_KEY" in payload["next_step"]

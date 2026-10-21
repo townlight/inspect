@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for helping CivicInspect become useful municipal software.
+Thank you for helping Townlight Inspections become useful municipal software.
 
 ## Development Loop
 
@@ -11,8 +11,8 @@ Thank you for helping CivicInspect become useful municipal software.
 
 ## Boundaries
 
-- CivicInspect gives inspection-support drafts, not official findings, citations, fines, notices, or inspection scheduling.
+- Townlight Inspections gives inspection-support drafts, not official findings, citations, fines, notices, or inspection scheduling.
 - Do not present generated report or notice drafts as publication-ready without inspector/staff review.
-- Do not import CivicCore placeholder packages.
+- Do not import Townlight Core placeholder packages.
 - Do not claim planned behavior is shipped.
 

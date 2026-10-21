@@ -1,9 +1,9 @@
-CivicInspect User Manual
+Townlight Inspections User Manual
 
-CivicInspect helps inspection staff turn field notes into review-ready inspection drafts while preserving staff control over every decision.
+Townlight Inspections helps inspection staff turn field notes into review-ready inspection drafts while preserving staff control over every decision.
 
-Current state: CivicInspect v0.2.2 corrective demotion state. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression, with the CivicCore pin unchanged. The module includes deterministic sample checks, optional database-backed repeat-case and report-draft records, staff review queue workflows, review-required CivicCode/case context packet support, adversarial local integration mocks, CivicCore v1.1.0 release-wheel alignment, and a public sample UI at /civicinspect.
+Current state: Townlight Inspections v0.2.2 corrective demotion state. This narrow truth-repair release is no functional upgrade; it exists solely to supersede the false v1.0.0 release from 2026-05-21 in GitHub's Latest impression, with the Townlight Core pin unchanged. The module includes deterministic sample checks, optional database-backed repeat-case and report-draft records, staff review queue workflows, review-required CivicCode/case context packet support, adversarial local integration mocks, Townlight Core v1.1.0 release-wheel alignment, and a public sample UI at /civicinspect.
 
 Set CIVICINSPECT_CASE_DB_URL to persist repeat-case, report-draft, and staff queue records. Set CIVICINSPECT_STAFF_API_KEY before using staff-only queue routes. Staff routes require X-CivicInspect-Role: staff or service and X-CivicInspect-Staff-Key with the configured key.
 
-CivicInspect does not issue official findings, citations, fines, notices, inspection schedules, legal advice, live photo analysis, live LLM calls, or system-of-record updates.
+Townlight Inspections does not issue official findings, citations, fines, notices, inspection schedules, legal advice, live photo analysis, live LLM calls, or system-of-record updates.

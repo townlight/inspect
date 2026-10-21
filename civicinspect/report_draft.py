@@ -1,4 +1,4 @@
-"""Inspection report draft helpers for CivicInspect."""
+"""Inspection report draft helpers for Townlight Inspections."""
 
 from __future__ import annotations
 

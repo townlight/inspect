@@ -1,8 +1,10 @@
 # GitHub Discussions Seed Posts
 
-## Welcome to CivicInspect
+<a id="welcome-to-civicinspect"></a>
 
-CivicInspect is the CivicSuite module for inspection support: repeat-case lookup, inspector-owned report drafts, notice draft support, and records-ready exports.
+## Welcome to Townlight Inspections
+
+Townlight Inspections is the Townlight module for inspection support: repeat-case lookup, inspector-owned report drafts, notice draft support, and records-ready exports.
 
 ## v0.1.0 Release Discussion
 
