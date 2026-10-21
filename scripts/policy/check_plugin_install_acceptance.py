@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 """Verify the Codex plugin install surface, not just repository tests.
 
 This script exists because repository tests and standalone skill copies can pass
