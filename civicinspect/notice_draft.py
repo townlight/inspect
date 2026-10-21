@@ -1,4 +1,4 @@
-"""Notice draft helpers for CivicInspect."""
+"""Notice draft helpers for Townlight Inspections."""
 
 from __future__ import annotations
 
@@ -43,7 +43,7 @@ def draft_notice(
             f"Inspector observations: {observation_text}"
         ),
         required_staff_actions=(
-            "Confirm the cited code section in CivicCode before issuing any notice.",
+            "Confirm the cited code section in Townlight Code before issuing any notice.",
             "Confirm property ownership and mailing address in the system of record.",
             f"Review {repeat_context.repeat_case_count} related sample case(s) before finalizing.",
         ),

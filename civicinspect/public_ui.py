@@ -1,10 +1,10 @@
-"""Static public UI shell for CivicInspect v0.2.2."""
+"""Static public UI shell for Townlight Inspections v0.2.2."""
 
 from __future__ import annotations
 
 
 def render_public_lookup_page() -> str:
-    """Render the public-facing CivicInspect sample page."""
+    """Render the public-facing Townlight Inspections sample page."""
 
     return """<!DOCTYPE html>
 <html lang="en">
@@ -107,7 +107,7 @@ def render_public_lookup_page() -> str:
       const noteText = notes.value.trim();
       button.disabled = false;
       if (!propertyText || !noteText) {
-        setResult("error", "More detail is needed", "Add a property reference and inspector notes, then draft again. CivicInspect cannot create useful review text from blank inputs.");
+        setResult("error", "More detail is needed", "Add a property reference and inspector notes, then draft again. Townlight Inspections cannot create useful review text from blank inputs.");
         return;
       }
       const lower = propertyText.toLowerCase();

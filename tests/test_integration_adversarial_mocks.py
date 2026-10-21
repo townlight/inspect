@@ -25,7 +25,7 @@ def test_adversarial_mock_rejects_spoofed_enforcement_and_live_photo_claims() ->
     assert "Rejected inspection context without trusted staff or service role." in result.findings
     assert "Rejected attempted official finding in integration context." in result.findings
     assert "Rejected attempted citation issuance in integration context." in result.findings
-    assert "does not call live CivicCode" in result.boundary
+    assert "does not call live Townlight Code" in result.boundary
 
 
 def test_integration_mock_api_accepts_complete_staff_context_for_review() -> None:
@@ -61,7 +61,7 @@ def test_integration_mock_api_blocks_stale_or_partial_context() -> None:
     assert response.status_code == 200
     payload = response.json()
     assert payload["status"] == "blocked-for-staff-review"
-    assert "Missing CivicCode context ID" in " ".join(payload["findings"])
+    assert "Missing Townlight Code context ID" in " ".join(payload["findings"])
     assert "Stale code/case context" in " ".join(payload["findings"])
 
 
@@ -80,6 +80,6 @@ def test_inspection_review_context_carries_code_and_case_references() -> None:
     assert response.status_code == 200
     payload = response.json()
     assert payload["review_required"] is True
-    assert "CivicCode context: code-section-1" in payload["citations"]
+    assert "Townlight Code context: code-section-1" in payload["citations"]
     assert "Inspection case context: case-2026-001" in payload["citations"]
     assert "official finding" in payload["boundary"]

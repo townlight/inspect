@@ -1,4 +1,4 @@
-"""Deterministic repeat-case lookup helpers for CivicInspect."""
+"""Deterministic repeat-case lookup helpers for Townlight Inspections."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 
 DISCLAIMER = (
-    "CivicInspect provides inspection-support drafts only. Inspectors own every decision; "
+    "Townlight Inspections provides inspection-support drafts only. Inspectors own every decision; "
     "the module does not issue official findings, citations, fines, or notices."
 )
 

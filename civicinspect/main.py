@@ -1,4 +1,4 @@
-"""FastAPI runtime foundation for CivicInspect."""
+"""FastAPI runtime foundation for Townlight Inspections."""
 
 import os
 
@@ -103,8 +103,8 @@ def root() -> dict[str, str]:
         "version": __version__,
         "status": "inspection support product with staff review queues",
         "message": (
-            "CivicInspect package, API foundation, sample repeat-case lookup, optional database-backed "
-            "repeat-case and report-draft records, staff review queues, review-required CivicCode "
+            "Townlight Inspections package, API foundation, sample repeat-case lookup, optional database-backed "
+            "repeat-case and report-draft records, staff review queues, review-required Townlight Code "
             "context packets, adversarial local integration mocks, inspector-owned report draft "
             "helper, notice draft helper, records-ready export checklist, and public UI are online; "
             "official findings, citations, fines, inspection scheduling, live photo analysis, live "
@@ -180,7 +180,7 @@ def get_inspection_report(report_id: str) -> dict[str, object]:
         raise HTTPException(
             status_code=503,
             detail={
-                "message": "CivicInspect case persistence is not configured.",
+                "message": "Townlight Inspections case persistence is not configured.",
                 "fix": "Set CIVICINSPECT_CASE_DB_URL to retrieve persisted inspection report records.",
             },
         )
@@ -215,7 +215,7 @@ def inspection_review_context(request: InspectionContextRequest) -> dict[str, ob
     )
     citations = [f"Repeat-case context: {case_id}" for case_id in repeat_context.related_case_ids]
     if request.code_context_id:
-        citations.append(f"CivicCode context: {request.code_context_id}")
+        citations.append(f"Townlight Code context: {request.code_context_id}")
     if request.case_context_id:
         citations.append(f"Inspection case context: {request.case_context_id}")
     return {
@@ -229,7 +229,7 @@ def inspection_review_context(request: InspectionContextRequest) -> dict[str, ob
         "repeat_case_count": repeat_context.repeat_case_count,
         "review_required": True,
         "boundary": (
-            "CivicInspect provides inspection review context only; it is not an official finding, "
+            "Townlight Inspections provides inspection review context only; it is not an official finding, "
             "citation, fine, notice issuance, inspection schedule, photo-analysis result, or "
             "system-of-record action."
         ),
@@ -312,7 +312,7 @@ def update_staff_review(
         raise HTTPException(
             status_code=404,
             detail={
-                "message": "CivicInspect staff review item was not found.",
+                "message": "Townlight Inspections staff review item was not found.",
                 "fix": "List staff reviews and retry with an existing review_id.",
             },
         )
@@ -380,7 +380,7 @@ def _require_persistence_configured() -> None:
         raise HTTPException(
             status_code=503,
             detail={
-                "message": "CivicInspect staff review persistence is not configured.",
+                "message": "Townlight Inspections staff review persistence is not configured.",
                 "fix": "Set CIVICINSPECT_CASE_DB_URL before using staff review queue routes.",
             },
         )

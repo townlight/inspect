@@ -1,4 +1,4 @@
-"""Adversarial local integration contracts for CivicInspect."""
+"""Adversarial local integration contracts for Townlight Inspections."""
 
 from __future__ import annotations
 
@@ -24,7 +24,7 @@ def validate_inspection_context_mocks(payload: dict[str, Any]) -> IntegrationMoc
     if payload.get("role") not in {"staff", "service"}:
         findings.append("Rejected inspection context without trusted staff or service role.")
     if not payload.get("code_context_id"):
-        findings.append("Missing CivicCode context ID; cite code context before notice drafting.")
+        findings.append("Missing Townlight Code context ID; cite code context before notice drafting.")
     if not payload.get("case_context_id"):
         findings.append("Missing inspection case context ID; confirm the system-of-record case first.")
     if payload.get("official_finding") is True:
@@ -45,8 +45,8 @@ def validate_inspection_context_mocks(payload: dict[str, Any]) -> IntegrationMoc
         review_required=True,
         findings=tuple(findings),
         boundary=(
-            "CivicInspect validates local integration context only; it does not call live "
-            "CivicCode, inspection scheduling, photo-analysis, LLM, or system-of-record "
+            "Townlight Inspections validates local integration context only; it does not call live "
+            "Townlight Code, inspection scheduling, photo-analysis, LLM, or system-of-record "
             "services in this recovery release."
         ),
     )
