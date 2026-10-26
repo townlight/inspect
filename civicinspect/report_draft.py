@@ -24,10 +24,12 @@ def draft_inspection_report(
     inspector_notes: str,
     photo_observations: tuple[str, ...] = (),
     voice_notes: str = "",
+    repeat_case_count: int | None = None,
 ) -> InspectionReportDraft:
     """Draft a report outline from inspector-provided text; no image analysis is performed."""
 
-    repeat_context = lookup_repeat_cases(property_reference=property_reference)
+    count = (lookup_repeat_cases(property_reference=property_reference).repeat_case_count
+             if repeat_case_count is None else repeat_case_count)
     observations = [note.strip() for note in photo_observations if note.strip()]
     if inspector_notes.strip():
         observations.insert(0, inspector_notes.strip())
@@ -40,7 +42,7 @@ def draft_inspection_report(
         property_reference=property_reference.strip() or "unknown property",
         summary=(
             f"Draft inspection report with {len(observations)} observation(s) and "
-            f"{repeat_context.repeat_case_count} related sample case(s)."
+            f"{count} related {'sample ' if repeat_case_count is None else 'saved '}case(s)."
         ),
         observation_bullets=tuple(observations),
         inspector_review_required=True,

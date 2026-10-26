@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 PLACEHOLDERS = {
-    "audit",
+    # Core 1.2.1 implements the persisted audit-chain API used by the connected store.
     "catalog",
     "connectors",
     "exemptions",
