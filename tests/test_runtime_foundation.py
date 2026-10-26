@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_package_version_is_100() -> None:
-    assert civicinspect.__version__ == "0.2.2"
+    assert civicinspect.__version__ == "0.3.0+dev.1"
 
 
 def test_root_endpoint_states_runtime_boundary() -> None:
@@ -22,7 +22,7 @@ def test_root_endpoint_states_runtime_boundary() -> None:
     payload = response.json()
 
     assert payload["name"] == "CivicInspect"
-    assert payload["version"] == "0.2.2"
+    assert payload["version"] == "0.3.0+dev.1"
     assert payload["status"] == "inspection support product with staff review queues"
     assert "staff review queues" in payload["message"]
     assert "Townlight Code context packets" in payload["message"]
@@ -38,7 +38,7 @@ def test_health_endpoint_reports_versions() -> None:
 
     assert payload["status"] == "ok"
     assert payload["service"] == "civicinspect"
-    assert payload["version"] == "0.2.2"
+    assert payload["version"] == "0.3.0+dev.1"
     assert re.fullmatch(r"\d+\.\d+\.\d+", payload["civiccore_version"])
 
 
@@ -56,7 +56,7 @@ def test_pyproject_uses_published_civiccore_release_wheel() -> None:
     dependencies = pyproject["project"]["dependencies"]
     assert any(
         dependency
-        == "civiccore @ https://github.com/CivicSuite/civiccore/releases/download/v1.1.0/civiccore-1.1.0-py3-none-any.whl#sha256=3ab146f4fea2ae99640d5b1b013be1a9676de5f91b783eaeaa913043a2ae2b87"
+        == "civiccore @ https://github.com/townlight/core/releases/download/v1.2.1/civiccore-1.2.1-py3-none-any.whl#sha256=8dde29408e206048bde63ec14156a8e6329382af4d16b12710d12aa5c27f3f59"
         for dependency in dependencies
     )
     assert pyproject["tool"]["hatch"]["metadata"]["allow-direct-references"] is True

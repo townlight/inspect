@@ -44,3 +44,8 @@ flowchart LR
 ```
 
 Townlight Inspections depends on Townlight Core. Townlight Core does not depend on Townlight Inspections. Townlight Inspections v0.2.2 uses deterministic sample data plus optional staff-gated persistence, review-required context packets for released Townlight Code references, staff review queue records, and adversarial local mocks for integration-depth validation.
+
+
+## Connected candidate 0.3.0+dev.1
+
+Connected desktop candidate 0.3.0+dev.1 adds migrated inspection revisions, original evidence hashes, actual saved repeat cases, public Code citations, server-attributed staff review and private/report versus separately edited Records-copy packets. Native staff authentication and the desktop inspections-preview profile are required. This is source work awaiting required CI and installed acceptance, not a published release. The standalone sample UI and historical 0.2.2 evidence remain unchanged. No official notice issuance, citation, fine, scheduling, image analysis or transcription is added.
