@@ -1,3 +1,28 @@
+# Townlight Inspections
+
+**Keep field evidence, review and the Records copy together.**
+
+Inspections organizes inspector-supplied evidence and report/notice drafts. Inspectors own observations and official decisions; the accepted workflow neither analyzes photos with AI nor initiates enforcement.
+
+## Use this product
+
+- [Current user manual](USER-MANUAL.md): installed workflow, roles, sources, review, export, recovery and limits.
+- [Product landing page](https://townlight.github.io/products/inspections/).
+- [Overall eight-product manual](https://github.com/townlight/townlight/blob/main/USER-MANUAL.md) and [feature/integration assessment](https://github.com/townlight/townlight/blob/main/docs/assessment/feature-and-integration-review.md).
+- [Signed composition and acceptance](https://github.com/townlight/townlight/releases/tag/townlight-records-meetings-code-zoning-planning-permitting-inspections-v1.7.0-beta.1): Signed Inspections 1.7.0-beta.1.
+
+Inspections consumes Core and cited Code, and supplies an explicit Records copy. A direct automated Permitting-to-Inspections handoff is not an accepted workflow.
+
+## Release scope
+
+Live photo analysis, automatic audio transcription, live LLM analysis, official citations/fines, scheduling and enforcement-system writeback are outside the accepted implementation. Inspector-supplied photo observations/voice summaries must not be advertised as automated photo/voice-to-report processing.
+
+Documentation reviewed 2026-10-26. Installed acceptance, source/API implementation and future requirements are different evidence. Code is AGPL-3.0-only with the repository’s public institution exception where applicable; documentation is CC BY 4.0. See the repository license files.
+
+## Historical repository reference
+
+The earlier README below is retained for package history and contributor commands. Older maturity/version statements describe that historical reference and are superseded by the current operating guide and linked release evidence.
+
 <a id="civicinspect"></a>
 
 # Townlight Inspections
