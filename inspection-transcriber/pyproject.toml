@@ -1,0 +1,12 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "townlight-inspection-transcriber"
+version = "0.1.19"
+description = "Owned TextFlowKit engine dependency for Townlight inspection voice drafting"
+requires-python = ">=3.11"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE", "TEXTFLOWKIT-ORIGINAL-LICENSE.txt"]
+[tool.hatch.build.targets.wheel]
+packages = ["src/textflowkit"]

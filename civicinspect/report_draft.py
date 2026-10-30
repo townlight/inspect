@@ -14,6 +14,7 @@ class InspectionReportDraft:
     summary: str
     observation_bullets: tuple[str, ...]
     inspector_review_required: bool
+    cited_sections: tuple[str, ...] = ()
     disclaimer: str = DISCLAIMER
 
 
@@ -25,6 +26,7 @@ def draft_inspection_report(
     photo_observations: tuple[str, ...] = (),
     voice_notes: str = "",
     repeat_case_count: int | None = None,
+    analysis=None,
 ) -> InspectionReportDraft:
     """Draft a report outline from inspector-provided text; no image analysis is performed."""
 
@@ -35,6 +37,15 @@ def draft_inspection_report(
         observations.insert(0, inspector_notes.strip())
     if voice_notes.strip():
         observations.append(f"Voice-note summary supplied by inspector: {voice_notes.strip()}")
+    analysed: list[str] = []
+    cited: list[str] = []
+    if analysis is not None:
+        for item in analysis.observations:
+            label = item.adapter or item.source
+            analysed.append(f"Adapter draft observation ({label}): {item.text}")
+        cited = [f"{section.citation} ({section.source_id})"
+                 for section in analysis.cited_sections]
+    observations.extend(analysed)
     if not observations:
         observations.append("No observations supplied; inspector must enter field notes.")
     return InspectionReportDraft(
@@ -45,5 +56,6 @@ def draft_inspection_report(
             f"{count} related {'sample ' if repeat_case_count is None else 'saved '}case(s)."
         ),
         observation_bullets=tuple(observations),
+        cited_sections=tuple(cited),
         inspector_review_required=True,
     )

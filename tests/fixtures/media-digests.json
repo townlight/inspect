@@ -1,0 +1,10 @@
+{
+  "inspection-photo.png": {
+    "sha256": "89480fad8097f8b8292189fdbe17d4b93afdc7bf5d7301b661c63e7f0d7c038c",
+    "bytes": 79
+  },
+  "inspection-voice.wav": {
+    "sha256": "add5086b284512e05c3c7da4b81e19b963fa8809bbb4e245e84ff247724f384d",
+    "bytes": 2444
+  }
+}
