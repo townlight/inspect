@@ -300,7 +300,7 @@
       "path": "LICENSE",
       "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
       "status": "same",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/inspect/LICENSE-CODE",
@@ -308,7 +308,7 @@
       "path": "LICENSE-CODE",
       "sha256": "ea964e0c07db63b534e87a519343dd4d9a8a94a634950a2f36b2922d7aeaca41",
       "status": "changed",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/inspect/LICENSE-DOCS",
@@ -316,7 +316,7 @@
       "path": "LICENSE-DOCS",
       "sha256": "d07988f4be47912f75a73b44da8a9c0b602bf6c8ced69de858b848f379ecd973",
       "status": "same",
-      "publication_sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e"
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
     },
     {
       "archive": "products/inspect/MILESTONE_0_7_DONE.md",
@@ -340,7 +340,7 @@
       "path": "README.md",
       "sha256": "5a0ac2f78adfa06a66286bbff2078397ebed08a118e61edc41534a991628839b",
       "status": "changed",
-      "publication_sha256": "ec20db09d8e60eda6c206f50f4706d1b2afdce7f0df61b3b5707098852c5aefa"
+      "publication_sha256": "31cde2775f2f93ffe62d9eca3ed4afe50181b54a31c8929fe0f04430e2d6fedb"
     },
     {
       "archive": "products/inspect/README.txt",
@@ -348,7 +348,7 @@
       "path": "README.txt",
       "sha256": "5a0ac2f78adfa06a66286bbff2078397ebed08a118e61edc41534a991628839b",
       "status": "changed",
-      "publication_sha256": "ec20db09d8e60eda6c206f50f4706d1b2afdce7f0df61b3b5707098852c5aefa"
+      "publication_sha256": "31cde2775f2f93ffe62d9eca3ed4afe50181b54a31c8929fe0f04430e2d6fedb"
     },
     {
       "archive": "products/inspect/SECURITY.md",
@@ -628,7 +628,7 @@
       "path": "docs/index.html",
       "sha256": "dc04a63ec7a78dab5f52ddbe791a2d8f0ab81a0c13084724ed526b0fe616cde0",
       "status": "same",
-      "publication_sha256": "4cc81a7eac2936d8768f48ab62ad36fc2f504ff92717384a358d849cd02a7bd3"
+      "publication_sha256": "cf4533ae0c4efb6ad94466113550385549806e41f41b1cd9cac21828737a15b9"
     },
     {
       "archive": "products/inspect/docs/licensing/README.md",
@@ -1100,7 +1100,7 @@
       "path": "tests/test_runtime_foundation.py",
       "sha256": "4f272a3b8ba3bfe5baaf1f0cbe9f06e5e54bfae8d419dc482bed9d7d9c2c5a4b",
       "status": "changed",
-      "publication_sha256": "a5db6fab9434d8098089423299c116d2ffa232364de330fe0c6e30f15a726dfc"
+      "publication_sha256": "3ebe97c1a2646cec357fa1788341cc2a2d96c1330ad0fc92ddfebf92fe04603c"
     },
     {
       "archive": "products/inspect/tests/test_transcription_adapter.py",
