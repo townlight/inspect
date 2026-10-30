@@ -167,6 +167,7 @@ class InspectionCaseRepository:
         inspector_notes: str,
         photo_observations: tuple[str, ...] = (),
         voice_notes: str = "",
+        analysis=None,
     ) -> StoredInspectionReport:
         draft = draft_inspection_report(
             inspection_id=inspection_id,
@@ -174,6 +175,7 @@ class InspectionCaseRepository:
             inspector_notes=inspector_notes,
             photo_observations=photo_observations,
             voice_notes=voice_notes,
+            analysis=analysis,
         )
         stored = StoredInspectionReport(
             report_id=str(uuid4()),

@@ -26,6 +26,38 @@ def sha(text):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def _verified_analysis(analysis, connected_sources):
+    """Keep only the analysed draft whose citations still resolve exactly.
+
+    ``connected_sources`` is what the trusted provider returned *now*: a source
+    that changed, was restricted or disappeared cannot be cited in a packet, so
+    its cited sections and the observations that rely on them are dropped rather
+    than exported from cached text.
+    """
+
+    if not analysis:
+        return None
+    live = {(entry.get("source") or entry)["source_id"]: (entry.get("source") or entry)
+            for entry in connected_sources}
+    cited = [{"source_id": section["source_id"], "citation": section["citation"],
+              "title": section.get("title", ""), "version": str(section.get("version", "")),
+              "text": live[section["source_id"]]["text"]}
+             for section in analysis.get("cited_sections", ())
+             if section.get("source_id") in live
+             and live[section["source_id"]]["sha256"] == sha(live[section["source_id"]]["text"])]
+    verified_ids = {section["source_id"] for section in cited}
+    dropped = [section["source_id"] for section in analysis.get("cited_sections", ())
+               if section.get("source_id") not in verified_ids]
+    observations = [dict(item) for item in analysis.get("observations", ())
+                    if set(item.get("citation_source_ids", ())) <= verified_ids]
+    return {"observations": observations, "cited_sections": cited,
+            "unavailable": list(analysis.get("unavailable", ())) + [
+                f"{source_id}: cited section could not be re-verified for this packet"
+                for source_id in dropped],
+            "runtime": analysis.get("runtime") or {},
+            "review_required": True}
+
+
 class InspectionRepository:
     def __init__(self, engine, providers=None):
         self.engine = engine
@@ -120,10 +152,13 @@ class InspectionRepository:
         report = draft_inspection_report(inspection_id=data.inspection_reference,
             property_reference=data.property_reference, inspector_notes=data.inspector_notes,
             photo_observations=tuple(data.photo_observations), voice_notes=data.voice_notes,
-            repeat_case_count=len([r for r in related if r["entity_id"] != case_id]))
+            repeat_case_count=len([r for r in related if r["entity_id"] != case_id]),
+            analysis=data.analysis)
         payload.update(boundary=BOUNDARY, reviewer_id=actor if data.review_state == "reviewed" else None,
             reviewed_on=datetime.now(UTC).date().isoformat() if data.review_state == "reviewed" else None,
             report_draft={"summary": report.summary, "observations": list(report.observation_bullets),
+                          "cited_sections": list(report.cited_sections),
+                          "analysis": payload.get("analysis"),
                           "review_required": True})
         return self._save(case_id or str(uuid4()), "case", payload, actor,
                           str(data.expected_revision) if data.expected_revision else None)
@@ -184,7 +219,14 @@ class InspectionRepository:
             record.update(public_summary=payload["public_summary"],
                 note="Staff-selected public copy for separate Records review; not automatically published or approved for release.")
         else:
-            record.update(staff_inspection=payload)
+            # The analysed draft follows the workpaper: it stays in the staff
+            # packet, re-verified against the live public sources at export, and
+            # never in the separately reviewed Records copy.
+            verified = _verified_analysis(payload.get("analysis"), sources)
+            staff = dict(payload, analysis=verified)
+            staff["report_draft"] = {**(payload.get("report_draft") or {}),
+                                     "analysis": verified}
+            record.update(staff_inspection=staff)
         text = canonical(record)
         digest = sha(text)
         packet_id = str(uuid5(NAMESPACE_URL, f"townlight:inspect:packet:{case_id}:{visibility}:{digest}"))

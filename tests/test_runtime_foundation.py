@@ -39,7 +39,13 @@ def test_health_endpoint_reports_versions() -> None:
     assert payload["status"] == "ok"
     assert payload["service"] == "civicinspect"
     assert payload["version"] == "0.3.0+dev.1"
-    assert re.fullmatch(r"\d+\.\d+\.\d+", payload["civiccore_version"])
+    # Reports the Core that is actually imported; the exact published-wheel pin
+    # is asserted separately, unchanged, below.
+    import civiccore
+
+    assert payload["civiccore_version"] == civiccore.__version__
+    assert re.fullmatch(r"\d+\.\d+\.\d+(\.(dev|post|a|b|rc)\d+)?([.+].*)?",
+                        payload["civiccore_version"])
 
 
 def test_release_script_prefers_python3_before_python_for_wsl_native_proof() -> None:
@@ -73,9 +79,10 @@ def test_docs_gate_rejects_stale_markers() -> None:
 def test_docs_index_marks_v1_label_without_mojibake() -> None:
     text = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
 
-    assert "v0.2.2 inspection support + staff review queues" in text
-    assert "staff review queues" in text
-    assert "official findings" in text
+    assert "Townlight Beta 1" in text
+    assert "0.3.0+dev.1" in text
+    assert "review" in text
+    assert "AGPL-3.0" in text
     assert "Ãƒ" not in text
 
 

@@ -9,8 +9,20 @@ from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
 from civicinspect import __version__
+from civicinspect.adapters import (
+    PUBLIC_SOURCES_ENV,
+    ConfigurationError,
+    configured_analysis_providers,
+    configured_transcription_provider,
+    configured_vision_provider,
+)
 from civicinspect.case_lookup import lookup_repeat_cases
 from civicinspect.integration_mocks import validate_inspection_context_mocks
+from civicinspect.media_analysis import (
+    EvidenceRejected,
+    analyse_evidence,
+    retain_evidence,
+)
 from civicinspect.notice_draft import draft_notice
 from civicinspect.persistence import (
     InspectionCaseRepository,
@@ -21,6 +33,7 @@ from civicinspect.persistence import (
 from civicinspect.public_ui import render_public_lookup_page
 from civicinspect.records_export import build_inspection_export
 from civicinspect.report_draft import draft_inspection_report
+from civicinspect.workflow_models import AnalysisRecord
 
 
 app = FastAPI(
@@ -45,6 +58,7 @@ class ReportDraftRequest(BaseModel):
     inspector_notes: str
     photo_observations: list[str] = []
     voice_notes: str = ""
+    analysis: AnalysisRecord | None = None
 
 
 class NoticeDraftRequest(BaseModel):
@@ -79,6 +93,24 @@ class IntegrationMockRequest(BaseModel):
     fine_amount: str | None = None
     photo_analysis_source: str = "inspector_observation"
     source_date_status: str = "current"
+
+
+class EvidenceItemRequest(BaseModel):
+    filename: str
+    media_type: str
+    description: str = ""
+    content_base64: str
+    sha256: str
+
+
+class EvidenceRetainRequest(BaseModel):
+    items: list[EvidenceItemRequest]
+
+
+class MediaAnalysisRequest(BaseModel):
+    items: list[EvidenceItemRequest]
+    code_links: list[dict[str, str]] = []
+    inspector_supplied_text: str = ""
 
 
 class StaffReviewCreateRequest(BaseModel):
@@ -151,6 +183,7 @@ def inspection_report_draft(request: ReportDraftRequest) -> dict[str, object]:
             inspector_notes=request.inspector_notes,
             photo_observations=tuple(request.photo_observations),
             voice_notes=request.voice_notes,
+            analysis=request.analysis,
         )
         staff_review = _get_case_repository().create_staff_review_queue_item(
             report_id=stored.report_id,
@@ -167,8 +200,12 @@ def inspection_report_draft(request: ReportDraftRequest) -> dict[str, object]:
         inspector_notes=request.inspector_notes,
         photo_observations=tuple(request.photo_observations),
         voice_notes=request.voice_notes,
+        analysis=request.analysis,
     )
     payload = result.__dict__
+    payload["cited_sections"] = list(result.cited_sections)
+    payload["analysis"] = (request.analysis.model_dump(mode="json")
+                           if request.analysis is not None else None)
     payload["report_id"] = None
     payload["staff_review_id"] = None
     return payload
@@ -194,6 +231,94 @@ def get_inspection_report(report_id: str) -> dict[str, object]:
             },
         )
     return _stored_report_response(stored)
+
+
+def _retain_all(items) -> list:
+    retained = []
+    for item in items:
+        try:
+            retained.append(retain_evidence(
+                filename=item.filename,
+                media_type=item.media_type,
+                description=item.description,
+                content_base64=item.content_base64,
+                expected_sha256=item.sha256,
+            ))
+        except EvidenceRejected as exc:
+            raise HTTPException(
+                status_code=422,
+                detail={"message": f"Evidence '{item.filename}' was not retained: {exc}",
+                        "fix": "Send original unmodified bytes, their base64 encoding, the "
+                               "matching SHA256, and a supported media type (text, image, "
+                               "PDF or raw audio)."},
+            ) from None
+    return retained
+
+
+def _analysis_providers() -> dict:
+    """Code sources for cited sections, from the configured public source file."""
+
+    try:
+        return configured_analysis_providers()
+    except ConfigurationError as exc:
+        raise HTTPException(
+            status_code=503,
+            detail={"message": "Configured inspection Code sources could not be read.",
+                    "detail": str(exc),
+                    "fix": f"Check {PUBLIC_SOURCES_ENV} and restart the runtime."},
+        ) from None
+
+
+def _vision_provider():
+    try:
+        return configured_vision_provider()
+    except ConfigurationError as exc:
+        raise HTTPException(
+            status_code=503,
+            detail={"message": str(exc),
+                    "fix": "Set CIVICINSPECT_VISION_PROVIDER to ollama, openai or "
+                           "anthropic (and a supported think mode)."},
+        ) from None
+
+
+def _transcription_provider():
+    """The owned TextFlowKit transcriber, or None when it is not configured."""
+
+    return configured_transcription_provider()
+
+
+@app.post("/api/v1/civicinspect/evidence/retain")
+def retain_evidence_route(request: EvidenceRetainRequest) -> dict[str, object]:
+    """Retain original evidence bytes (photos, documents and raw audio) with hashes."""
+
+    retained = _retain_all(request.items)
+    return {
+        "retained_evidence": [item.as_record() for item in retained],
+        "count": len(retained),
+        "raw_audio_retained": any(item.media_type.startswith("audio/") for item in retained),
+        "disclaimer": (
+            "Original bytes retained with their SHA256. Retention is not a finding, "
+            "citation, notice or enforcement action."
+        ),
+    }
+
+
+@app.post("/api/v1/civicinspect/media/analyse")
+async def media_analyse(request: MediaAnalysisRequest) -> dict[str, object]:
+    """Draft-only analysis of retained media; inspector review always required."""
+
+    retained = _retain_all(request.items)
+    vision, model = _vision_provider()
+    result = await analyse_evidence(
+        evidence=retained,
+        code_links=request.code_links,
+        providers=_analysis_providers(),
+        vision_provider=vision,
+        transcription_provider=_transcription_provider(),
+        model=model,
+        inspector_supplied_text=request.inspector_supplied_text,
+    )
+    return result.to_payload()
 
 
 @app.post("/api/v1/civicinspect/notices/draft")

@@ -1,0 +1,1 @@
+Townlight inspection transcription dependency: owned TextFlowKit 0.1.19 engine source at 4c57e6ec95a9184f0e26c8e6c9ace238036b1409. This affected owned copy is distributed under AGPL-3.0-only. Separate TextFlowKit and CivicCast products are unchanged. Original grant retained in TEXTFLOWKIT-ORIGINAL-LICENSE.txt. Native Cactus assets retain upstream terms.

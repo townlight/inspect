@@ -1,0 +1,2364 @@
+{
+  "edition": "Townlight Beta 1",
+  "base_commit": "0b8b1b062f49550b16fd39546cf714405e9a8327",
+  "installer_sha256": "98bcdef11ebdf5c767f620c904ff49f85115fde3b5c23f62703b111e645aaf86",
+  "owned_source_sha256": "84a23e1297e42d17b16cfc9e51b2dd78bc46414c0de8ad7ebd2466c1a409d06b",
+  "documentation_sha256": "a928bb1c40fec7ef6f223c7b77bc9fe7837e4cfffcebf35bb3309cc5549284e6",
+  "release": "https://github.com/townlight/townlight/releases/tag/townlight-beta-1",
+  "archive_files": [
+    {
+      "archive": "products/inspect/.github/ISSUE_TEMPLATE/bug_report.md",
+      "repo": "inspect",
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "sha256": "77ca6fba69bb081b8408d9f460d416fc1f7384b21e0ee57e4fc6db2c02827a4a",
+      "status": "same",
+      "publication_sha256": "77ca6fba69bb081b8408d9f460d416fc1f7384b21e0ee57e4fc6db2c02827a4a"
+    },
+    {
+      "archive": "products/inspect/.github/ISSUE_TEMPLATE/config.yml",
+      "repo": "inspect",
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "b67aa09d030de0b8cd6e32635de51d8ef65d4527dcb6e70435f2c14ed3f6c9f1",
+      "status": "same",
+      "publication_sha256": "43d47d72a81155b09c2498a09025624c660bef0db3099048b117a167e4e02996"
+    },
+    {
+      "archive": "products/inspect/.github/ISSUE_TEMPLATE/feature_request.md",
+      "repo": "inspect",
+      "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+      "sha256": "ef483ffb608352e520df14bc9e0ce7d5944e3036cb616cc364d5d6c585b69849",
+      "status": "same",
+      "publication_sha256": "ef483ffb608352e520df14bc9e0ce7d5944e3036cb616cc364d5d6c585b69849"
+    },
+    {
+      "archive": "products/inspect/.github/PULL_REQUEST_TEMPLATE.md",
+      "repo": "inspect",
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "02c484ad13a022f32642efdc9af1113410c2799498bf2eae2466da44c24ea31a",
+      "status": "same",
+      "publication_sha256": "02c484ad13a022f32642efdc9af1113410c2799498bf2eae2466da44c24ea31a"
+    },
+    {
+      "archive": "products/inspect/.github/workflows/release.yml",
+      "repo": "inspect",
+      "path": ".github/workflows/release.yml",
+      "sha256": "fd704f675fa68fb7d8712593c8d959dc20763c1b61aa685180fbb6f4619c09e7",
+      "status": "same",
+      "publication_sha256": "864f360fc781c8d7961662f3c0087556ecd1cf12b2074ddf2f4a013fd2044b51"
+    },
+    {
+      "archive": "products/inspect/.github/workflows/verify.yml",
+      "repo": "inspect",
+      "path": ".github/workflows/verify.yml",
+      "sha256": "4253c7d4173c82f90113ec44860ebf2abf6a992ff82a0490f1eff2772b7dc4d5",
+      "status": "same",
+      "publication_sha256": "5882263055d343b45a028ddb471f977a7fe69a698bf7d7448dac3f6cfbb9ca25"
+    },
+    {
+      "archive": "products/inspect/.pipelines/action-classification.yaml",
+      "repo": "inspect",
+      "path": ".pipelines/action-classification.yaml",
+      "sha256": "c4dbc23ed19cace8ea0fffeb6e875e57ad70473f8ae98842a5bbd67117ea29a2",
+      "status": "same",
+      "publication_sha256": "662b7d9ea2aff8d76ce59dcab4205c06d429f7787d9239a3edd904ff46a73ecf"
+    },
+    {
+      "archive": "products/inspect/.pipelines/bugfix.yaml",
+      "repo": "inspect",
+      "path": ".pipelines/bugfix.yaml",
+      "sha256": "e8cfdb75b879050f9f3e0216090bd29b01cc1d811694913b42186b82c6d7db90",
+      "status": "same",
+      "publication_sha256": "12ef4f5091975d4d0bb10188fd662984dca861f4f4ab73fbeaa20a279014b2ab"
+    },
+    {
+      "archive": "products/inspect/.pipelines/directive-template.yaml",
+      "repo": "inspect",
+      "path": ".pipelines/directive-template.yaml",
+      "sha256": "5d88863c06bbe252cbda98548b650d23f5db96b175aa5a5ee7c70637472fbe9b",
+      "status": "same",
+      "publication_sha256": "bff99943a054c1cbba47cd1fca43ce5ded344bf2ad4e0881a6b5e192226e47fe"
+    },
+    {
+      "archive": "products/inspect/.pipelines/feature.yaml",
+      "repo": "inspect",
+      "path": ".pipelines/feature.yaml",
+      "sha256": "4dbf62d79b76d8da9fe1cd46134b2fabf59aea3a87b0be9bc50025ed2a365275",
+      "status": "same",
+      "publication_sha256": "8ecbf791e71c1294ec0ead57f4d6f664e7729860f7e58d10085fb0a1c977c505"
+    },
+    {
+      "archive": "products/inspect/.pipelines/manifest-template.yaml",
+      "repo": "inspect",
+      "path": ".pipelines/manifest-template.yaml",
+      "sha256": "cae7ac4960f3a25f41ae020af2fd8ac261d1a5c57b80e1c46269ce80932bdcbd",
+      "status": "same",
+      "publication_sha256": "16436e50e88e27baf2f7e8a99b47137c38aa3af69b8c8c646eeeade3b6ec7a05"
+    },
+    {
+      "archive": "products/inspect/.pipelines/module-release.yaml",
+      "repo": "inspect",
+      "path": ".pipelines/module-release.yaml",
+      "sha256": "6e47ab3eb62b2a2c26043eb7503a0a323358f718d5a4bc0155fe94a10f55452f",
+      "status": "same",
+      "publication_sha256": "9a51ae3725614ffd1dc9c4ef7718e71e92172fd845897e57abd6aef3bccf96f4"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/critic.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/critic.md",
+      "sha256": "0cfd6ef39a8be04fe400daaebcaf00ee54887cdf178216970d3ecac7b80a3098",
+      "status": "same",
+      "publication_sha256": "0cfd6ef39a8be04fe400daaebcaf00ee54887cdf178216970d3ecac7b80a3098"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/cross-agent-auditor.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/cross-agent-auditor.md",
+      "sha256": "55c24c157a8e71ab91114ea9e33088a2f22a4be5abca924f38b685450db0674b",
+      "status": "same",
+      "publication_sha256": "55c24c157a8e71ab91114ea9e33088a2f22a4be5abca924f38b685450db0674b"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/drift-detector.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/drift-detector.md",
+      "sha256": "9c7688ea906772770383a8f566df0538c3d1372b7bbc9b62662fe67ca09a8dc9",
+      "status": "same",
+      "publication_sha256": "9c7688ea906772770383a8f566df0538c3d1372b7bbc9b62662fe67ca09a8dc9"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/executor.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/executor.md",
+      "sha256": "0776e61baf0d2e40e9bc6a5ba49e51b9447f191b463d2ad3356160a56a47a716",
+      "status": "same",
+      "publication_sha256": "0776e61baf0d2e40e9bc6a5ba49e51b9447f191b463d2ad3356160a56a47a716"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/implementer-pre-push.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/implementer-pre-push.md",
+      "sha256": "6cebb132a38676537819e37715a490e4e6ef497d91f83b9ba9907af0e195de2f",
+      "status": "same",
+      "publication_sha256": "6cebb132a38676537819e37715a490e4e6ef497d91f83b9ba9907af0e195de2f"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/judge.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/judge.md",
+      "sha256": "f376f448cbefd8f5cd9f93db0e99be2afd6dfcfa0e35f614a600114b438e334c",
+      "status": "same",
+      "publication_sha256": "f376f448cbefd8f5cd9f93db0e99be2afd6dfcfa0e35f614a600114b438e334c"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/local-rehearsal.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/local-rehearsal.md",
+      "sha256": "bef30664f4663ca1aad7d1d28cdd9c3b169da3da8bc98896673879ee916b0764",
+      "status": "same",
+      "publication_sha256": "bef30664f4663ca1aad7d1d28cdd9c3b169da3da8bc98896673879ee916b0764"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/manager.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/manager.md",
+      "sha256": "5422b9582a48552673509e01c61fc4e2a140e4c837533975be9db132612b3cdb",
+      "status": "same",
+      "publication_sha256": "5422b9582a48552673509e01c61fc4e2a140e4c837533975be9db132612b3cdb"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/planner.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/planner.md",
+      "sha256": "416b1b0ea4cebc19e4776215d903ad444dd5bbcd3449ea7ab77135af48b009b2",
+      "status": "same",
+      "publication_sha256": "416b1b0ea4cebc19e4776215d903ad444dd5bbcd3449ea7ab77135af48b009b2"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/preflight-auditor.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/preflight-auditor.md",
+      "sha256": "c5f16c06631b2815adccfcf9baf07096aa0289547393ccc01b34315a1636f182",
+      "status": "same",
+      "publication_sha256": "c5f16c06631b2815adccfcf9baf07096aa0289547393ccc01b34315a1636f182"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/researcher.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/researcher.md",
+      "sha256": "de71ee77daf7a28cf1044cd54883efc0b4312d6c9bd4d5081c915879527ed21d",
+      "status": "same",
+      "publication_sha256": "de71ee77daf7a28cf1044cd54883efc0b4312d6c9bd4d5081c915879527ed21d"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/test-writer.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/test-writer.md",
+      "sha256": "e9ce3e4f0fa89041786cfa8a3b694ca50917f2ed6570df591f6e4343415bc02f",
+      "status": "same",
+      "publication_sha256": "e9ce3e4f0fa89041786cfa8a3b694ca50917f2ed6570df591f6e4343415bc02f"
+    },
+    {
+      "archive": "products/inspect/.pipelines/roles/verifier.md",
+      "repo": "inspect",
+      "path": ".pipelines/roles/verifier.md",
+      "sha256": "f30177313c45c0a57c1de203c045567fa06ad48927e0dec44f93498b52ed1e90",
+      "status": "same",
+      "publication_sha256": "f30177313c45c0a57c1de203c045567fa06ad48927e0dec44f93498b52ed1e90"
+    },
+    {
+      "archive": "products/inspect/.pipelines/scope-lock-template.yaml",
+      "repo": "inspect",
+      "path": ".pipelines/scope-lock-template.yaml",
+      "sha256": "c94aaee7da8bffcad68d77e8448998a7cd3c921e9e2713689c18d520f1db753e",
+      "status": "same",
+      "publication_sha256": "8720839903dc32d5f09e5567e99e75639453b810c71c5533cbe868e184e8b9e3"
+    },
+    {
+      "archive": "products/inspect/.pipelines/self-classification-rules.md",
+      "repo": "inspect",
+      "path": ".pipelines/self-classification-rules.md",
+      "sha256": "a1b5e293e4def3a5a1b1df9db82ed32941689a7b630f64b420fbe38e69adef23",
+      "status": "same",
+      "publication_sha256": "a1b5e293e4def3a5a1b1df9db82ed32941689a7b630f64b420fbe38e69adef23"
+    },
+    {
+      "archive": "products/inspect/.pipelines/templates/5-lens-self-audit-template.md",
+      "repo": "inspect",
+      "path": ".pipelines/templates/5-lens-self-audit-template.md",
+      "sha256": "a8b0ca1496883b1943959eadd7683e5c3a6ec49d091d1869730d22ae54e19812",
+      "status": "same",
+      "publication_sha256": "a8b0ca1496883b1943959eadd7683e5c3a6ec49d091d1869730d22ae54e19812"
+    },
+    {
+      "archive": "products/inspect/.pipelines/templates/AGENTS.md",
+      "repo": "inspect",
+      "path": ".pipelines/templates/AGENTS.md",
+      "sha256": "9074a44f5b17cc01039c0a4547c7808bb3ebcb3c64c39ac584d7a151aa7253f3",
+      "status": "same",
+      "publication_sha256": "9074a44f5b17cc01039c0a4547c7808bb3ebcb3c64c39ac584d7a151aa7253f3"
+    },
+    {
+      "archive": "products/inspect/.pipelines/templates/audit-gate-template.md",
+      "repo": "inspect",
+      "path": ".pipelines/templates/audit-gate-template.md",
+      "sha256": "77f4d7fe63a0cf1ad557dae27f398b723dfbc3cd7269a86d071073080d34a20b",
+      "status": "same",
+      "publication_sha256": "77f4d7fe63a0cf1ad557dae27f398b723dfbc3cd7269a86d071073080d34a20b"
+    },
+    {
+      "archive": "products/inspect/.pipelines/templates/audit-protocol-template.md",
+      "repo": "inspect",
+      "path": ".pipelines/templates/audit-protocol-template.md",
+      "sha256": "7cc7b81ff5842052ecdb1770210cdf85504286b604e20ebc10e9b157e7725b05",
+      "status": "same",
+      "publication_sha256": "7cc7b81ff5842052ecdb1770210cdf85504286b604e20ebc10e9b157e7725b05"
+    },
+    {
+      "archive": "products/inspect/.pipelines/templates/workflow-cost-directives.md",
+      "repo": "inspect",
+      "path": ".pipelines/templates/workflow-cost-directives.md",
+      "sha256": "362019a12e3f48d7e873a78ff829fbf206227edb0d3033f9d28e5d553e0904d1",
+      "status": "same",
+      "publication_sha256": "362019a12e3f48d7e873a78ff829fbf206227edb0d3033f9d28e5d553e0904d1"
+    },
+    {
+      "archive": "products/inspect/AGENTS.md",
+      "repo": "inspect",
+      "path": "AGENTS.md",
+      "sha256": "6ee68748638d0e073a927f6e12283cc22e2029dffb6b9c67511504b0270c2c83",
+      "status": "same",
+      "publication_sha256": "6ee68748638d0e073a927f6e12283cc22e2029dffb6b9c67511504b0270c2c83"
+    },
+    {
+      "archive": "products/inspect/CHANGELOG.md",
+      "repo": "inspect",
+      "path": "CHANGELOG.md",
+      "sha256": "cd0f1f740372b2b365e06e2ad0544590eae8090ab8acd90db18f6b6af3530a50",
+      "status": "changed",
+      "publication_sha256": "b9efaa301714d4ee976f29f78aede2ed5d473c41e1ccdbf2665bbe3184b11c04"
+    },
+    {
+      "archive": "products/inspect/CODE_OF_CONDUCT.md",
+      "repo": "inspect",
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "9cc0a63d55c8741ffc1a36e858871c81be029937d77b51cd0dd5d833f8778cb7",
+      "status": "same",
+      "publication_sha256": "9cc0a63d55c8741ffc1a36e858871c81be029937d77b51cd0dd5d833f8778cb7"
+    },
+    {
+      "archive": "products/inspect/CONTRIBUTING.md",
+      "repo": "inspect",
+      "path": "CONTRIBUTING.md",
+      "sha256": "cf57539ac145de1a3b4983ad9ac4db405ee78869b7c0fdaf02cec0a3964c583f",
+      "status": "same",
+      "publication_sha256": "cf57539ac145de1a3b4983ad9ac4db405ee78869b7c0fdaf02cec0a3964c583f"
+    },
+    {
+      "archive": "products/inspect/LICENSE",
+      "repo": "inspect",
+      "path": "LICENSE",
+      "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
+      "status": "same",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/inspect/LICENSE-CODE",
+      "repo": "inspect",
+      "path": "LICENSE-CODE",
+      "sha256": "ea964e0c07db63b534e87a519343dd4d9a8a94a634950a2f36b2922d7aeaca41",
+      "status": "changed",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/inspect/LICENSE-DOCS",
+      "repo": "inspect",
+      "path": "LICENSE-DOCS",
+      "sha256": "d07988f4be47912f75a73b44da8a9c0b602bf6c8ced69de858b848f379ecd973",
+      "status": "same",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/inspect/MILESTONE_0_7_DONE.md",
+      "repo": "inspect",
+      "path": "MILESTONE_0_7_DONE.md",
+      "sha256": "0a1d6905040b95f64bb58d7c9dc5f3e23bc9433f9b376c3ef0d243bd30230599",
+      "status": "same",
+      "publication_sha256": "0a1d6905040b95f64bb58d7c9dc5f3e23bc9433f9b376c3ef0d243bd30230599"
+    },
+    {
+      "archive": "products/inspect/PRODUCTION_DEPTH_CASE_PERSISTENCE_DONE.md",
+      "repo": "inspect",
+      "path": "PRODUCTION_DEPTH_CASE_PERSISTENCE_DONE.md",
+      "sha256": "725d4274ee6d9af3d108fb49d03e2ed0693dc2b1a7f0c28a330dd34f4356c6d8",
+      "status": "same",
+      "publication_sha256": "725d4274ee6d9af3d108fb49d03e2ed0693dc2b1a7f0c28a330dd34f4356c6d8"
+    },
+    {
+      "archive": "products/inspect/README.md",
+      "repo": "inspect",
+      "path": "README.md",
+      "sha256": "5a0ac2f78adfa06a66286bbff2078397ebed08a118e61edc41534a991628839b",
+      "status": "changed",
+      "publication_sha256": "31cde2775f2f93ffe62d9eca3ed4afe50181b54a31c8929fe0f04430e2d6fedb"
+    },
+    {
+      "archive": "products/inspect/README.txt",
+      "repo": "inspect",
+      "path": "README.txt",
+      "sha256": "5a0ac2f78adfa06a66286bbff2078397ebed08a118e61edc41534a991628839b",
+      "status": "changed",
+      "publication_sha256": "31cde2775f2f93ffe62d9eca3ed4afe50181b54a31c8929fe0f04430e2d6fedb"
+    },
+    {
+      "archive": "products/inspect/SECURITY.md",
+      "repo": "inspect",
+      "path": "SECURITY.md",
+      "sha256": "e03c4bf034f5b51f82523552ed5619264a2415f43cefa1075d9892b2895ec1e8",
+      "status": "changed",
+      "publication_sha256": "6ac35abc68927ec1e20d08e27b62ec06f51da170aac04fb30a7345ecc836917c"
+    },
+    {
+      "archive": "products/inspect/SUPPORT.md",
+      "repo": "inspect",
+      "path": "SUPPORT.md",
+      "sha256": "28cc49859336c78f12fe6a38baffc7b92a7e93287360283cdbae724106624ada",
+      "status": "same",
+      "publication_sha256": "28cc49859336c78f12fe6a38baffc7b92a7e93287360283cdbae724106624ada"
+    },
+    {
+      "archive": "products/inspect/USER-MANUAL.md",
+      "repo": "inspect",
+      "path": "USER-MANUAL.md",
+      "sha256": "8efdbc6707f1e58933135a848af81db8cd9fdb4a43926a8dc1efe307b7866e07",
+      "status": "same",
+      "publication_sha256": "3ee641d006c85d0a540e8df5e0fd940f9a7f8efe9c3c408ae8a90cc02d9bab1d"
+    },
+    {
+      "archive": "products/inspect/USER-MANUAL.txt",
+      "repo": "inspect",
+      "path": "USER-MANUAL.txt",
+      "sha256": "8efdbc6707f1e58933135a848af81db8cd9fdb4a43926a8dc1efe307b7866e07",
+      "status": "same",
+      "publication_sha256": "3ee641d006c85d0a540e8df5e0fd940f9a7f8efe9c3c408ae8a90cc02d9bab1d"
+    },
+    {
+      "archive": "products/inspect/civicinspect/__init__.py",
+      "repo": "inspect",
+      "path": "civicinspect/__init__.py",
+      "sha256": "eff685acecf3985653f811403aaabc6862d52ce7e343c38aa5242f40d4266c47",
+      "status": "changed",
+      "publication_sha256": "6d591ac51b23a6f3ec20fab89129e04230f119961269f6f4e5e5742b15d70092"
+    },
+    {
+      "archive": "products/inspect/civicinspect/_whistle_driver.py",
+      "repo": "inspect",
+      "path": "civicinspect/_whistle_driver.py",
+      "sha256": "90ce9276c7d1de4d3259a2c00ff581e5d55d28dd8da913ed7b8bd2d7c89a5264",
+      "status": "new",
+      "publication_sha256": "90ce9276c7d1de4d3259a2c00ff581e5d55d28dd8da913ed7b8bd2d7c89a5264"
+    },
+    {
+      "archive": "products/inspect/civicinspect/adapters.py",
+      "repo": "inspect",
+      "path": "civicinspect/adapters.py",
+      "sha256": "ab76d8c1a8b57167acf759390b49a3941f04b4483a606be2abbae69f4f8165db",
+      "status": "new",
+      "publication_sha256": "ab76d8c1a8b57167acf759390b49a3941f04b4483a606be2abbae69f4f8165db"
+    },
+    {
+      "archive": "products/inspect/civicinspect/case_lookup.py",
+      "repo": "inspect",
+      "path": "civicinspect/case_lookup.py",
+      "sha256": "b68030ecdf6a7f83ed35aec636afcb70c5ce247a40ed7d60a3283655bfdb3214",
+      "status": "same",
+      "publication_sha256": "b68030ecdf6a7f83ed35aec636afcb70c5ce247a40ed7d60a3283655bfdb3214"
+    },
+    {
+      "archive": "products/inspect/civicinspect/connections.py",
+      "repo": "inspect",
+      "path": "civicinspect/connections.py",
+      "sha256": "82221673e19e1bd48215cfc9dbeab837070cd9a6bdd3f3cf57cf3034f3ac3bef",
+      "status": "changed",
+      "publication_sha256": "a32e5723ed2b93b0e72a6659ac0db8f614db1be7cc5cb4881a40b9abdff85e60"
+    },
+    {
+      "archive": "products/inspect/civicinspect/integration_mocks.py",
+      "repo": "inspect",
+      "path": "civicinspect/integration_mocks.py",
+      "sha256": "dfc700d977badb104db5abddded3120b1bff99445a6bbf18f7a6925c9087c797",
+      "status": "same",
+      "publication_sha256": "dfc700d977badb104db5abddded3120b1bff99445a6bbf18f7a6925c9087c797"
+    },
+    {
+      "archive": "products/inspect/civicinspect/main.py",
+      "repo": "inspect",
+      "path": "civicinspect/main.py",
+      "sha256": "16306b47d0e6e526176c050b2eb2edb6a047edea3bb5f313df48c026a81cc53e",
+      "status": "changed",
+      "publication_sha256": "16306b47d0e6e526176c050b2eb2edb6a047edea3bb5f313df48c026a81cc53e"
+    },
+    {
+      "archive": "products/inspect/civicinspect/media_analysis.py",
+      "repo": "inspect",
+      "path": "civicinspect/media_analysis.py",
+      "sha256": "be51101ee98596bca3055f99136531e3a76e28f2dc584148cf26098d75a94c5a",
+      "status": "new",
+      "publication_sha256": "970a05a149589f8d6cda712fe14d161df079d4ed32205a0086217a877bb6cead"
+    },
+    {
+      "archive": "products/inspect/civicinspect/migrations/__init__.py",
+      "repo": "inspect",
+      "path": "civicinspect/migrations/__init__.py",
+      "sha256": "e18fc02330135cd7d0dd678a3e17f9e81966a9e187c3ed0ec002439fa8d3bbb1",
+      "status": "changed",
+      "publication_sha256": "e52c2e43afd8018a89385ceadde739a470ebe8076c26ecee27345a57b233e539"
+    },
+    {
+      "archive": "products/inspect/civicinspect/migrations/env.py",
+      "repo": "inspect",
+      "path": "civicinspect/migrations/env.py",
+      "sha256": "9612897b28e02e86d1fa5b9ed48d951b76bb5a87151112d0c1cdbe10a0d343e3",
+      "status": "changed",
+      "publication_sha256": "8afa7eadad791cb5a3b8eb9a08e62236bb6124957e5fb7d0e1447b73d871b408"
+    },
+    {
+      "archive": "products/inspect/civicinspect/migrations/versions/civicinspect_0001_connected.py",
+      "repo": "inspect",
+      "path": "civicinspect/migrations/versions/civicinspect_0001_connected.py",
+      "sha256": "0e71ed311993f45634eb42ba22f5c2b2c4a3854639b221857af76f826d1b68de",
+      "status": "changed",
+      "publication_sha256": "01eaff1bc74366d70c264debce1fe38a341bdc3d769ab0abab7af45abd0cf8f3"
+    },
+    {
+      "archive": "products/inspect/civicinspect/notice_draft.py",
+      "repo": "inspect",
+      "path": "civicinspect/notice_draft.py",
+      "sha256": "ef44c7d6bcf131bc703f6d0282510fe8a49cc6b5988f6252d01353e15551a2f6",
+      "status": "same",
+      "publication_sha256": "ef44c7d6bcf131bc703f6d0282510fe8a49cc6b5988f6252d01353e15551a2f6"
+    },
+    {
+      "archive": "products/inspect/civicinspect/persistence.py",
+      "repo": "inspect",
+      "path": "civicinspect/persistence.py",
+      "sha256": "a4c75976a7fe2cc25d2c9a9074eee1a2870eb47bcf6890564d2fb31b113579e3",
+      "status": "changed",
+      "publication_sha256": "a4c75976a7fe2cc25d2c9a9074eee1a2870eb47bcf6890564d2fb31b113579e3"
+    },
+    {
+      "archive": "products/inspect/civicinspect/public_ui.py",
+      "repo": "inspect",
+      "path": "civicinspect/public_ui.py",
+      "sha256": "c14bd5b3d45dc1434edeffb931cd6abb8804bff675989769c8eb89c85a46f965",
+      "status": "same",
+      "publication_sha256": "c14bd5b3d45dc1434edeffb931cd6abb8804bff675989769c8eb89c85a46f965"
+    },
+    {
+      "archive": "products/inspect/civicinspect/records_export.py",
+      "repo": "inspect",
+      "path": "civicinspect/records_export.py",
+      "sha256": "6adcb9a04cbff7d9d455f41598a0bdb1dfd736aa13f439a61f1e2ed98f8b49bb",
+      "status": "same",
+      "publication_sha256": "6adcb9a04cbff7d9d455f41598a0bdb1dfd736aa13f439a61f1e2ed98f8b49bb"
+    },
+    {
+      "archive": "products/inspect/civicinspect/report_draft.py",
+      "repo": "inspect",
+      "path": "civicinspect/report_draft.py",
+      "sha256": "40faeb3103ac9ba5ae45fd74136d5cff0a96c5fa73acb96f4a16a34d1cb7ebd5",
+      "status": "changed",
+      "publication_sha256": "40faeb3103ac9ba5ae45fd74136d5cff0a96c5fa73acb96f4a16a34d1cb7ebd5"
+    },
+    {
+      "archive": "products/inspect/civicinspect/transcription.py",
+      "repo": "inspect",
+      "path": "civicinspect/transcription.py",
+      "sha256": "0289536c591fa63b6bfa25512444c4a36edc1f160a93d195d3e5aea9e718289f",
+      "status": "new",
+      "publication_sha256": "0289536c591fa63b6bfa25512444c4a36edc1f160a93d195d3e5aea9e718289f"
+    },
+    {
+      "archive": "products/inspect/civicinspect/workflow_models.py",
+      "repo": "inspect",
+      "path": "civicinspect/workflow_models.py",
+      "sha256": "7f61e6c7bde5b79202b562d9183c5558d5504fe19eda9ed8fe52541d92152377",
+      "status": "changed",
+      "publication_sha256": "8f2a9ee259a26d05c35efa1e63225094934256922e2477337c15ca987119d5e7"
+    },
+    {
+      "archive": "products/inspect/civicinspect/workflow_schema.py",
+      "repo": "inspect",
+      "path": "civicinspect/workflow_schema.py",
+      "sha256": "2f8638e3319939ce8b3f7b0b1ef59013f3344b8bcaf9be7d1ad6f3bd4b30ac68",
+      "status": "changed",
+      "publication_sha256": "24b9ae035c1527b5ea371027b4a478c3484a71cbf68f847eb53678bb68488470"
+    },
+    {
+      "archive": "products/inspect/civicinspect/workflow_store.py",
+      "repo": "inspect",
+      "path": "civicinspect/workflow_store.py",
+      "sha256": "df4ff48879d5f8fe31d71a410a99ed8c359676ab05a267db65e1468cb4764146",
+      "status": "changed",
+      "publication_sha256": "df4ff48879d5f8fe31d71a410a99ed8c359676ab05a267db65e1468cb4764146"
+    },
+    {
+      "archive": "products/inspect/docs/IMPLEMENTATION_PLAN.md",
+      "repo": "inspect",
+      "path": "docs/IMPLEMENTATION_PLAN.md",
+      "sha256": "0b386f780f292cbd4e75477929a6e010f3893b8bdb957fb5526bd6c9ce4e29f0",
+      "status": "same",
+      "publication_sha256": "0b386f780f292cbd4e75477929a6e010f3893b8bdb957fb5526bd6c9ce4e29f0"
+    },
+    {
+      "archive": "products/inspect/docs/MILESTONES.md",
+      "repo": "inspect",
+      "path": "docs/MILESTONES.md",
+      "sha256": "3e8c105dc32d7d467a39238d8779307d4fe2ba6baf408776c6fd92398063300e",
+      "status": "same",
+      "publication_sha256": "3e8c105dc32d7d467a39238d8779307d4fe2ba6baf408776c6fd92398063300e"
+    },
+    {
+      "archive": "products/inspect/docs/RECONCILIATION.md",
+      "repo": "inspect",
+      "path": "docs/RECONCILIATION.md",
+      "sha256": "efde1ef034141abae9a7811acd7dd442363352d8b4221e7a2b3f766e4d6744a0",
+      "status": "same",
+      "publication_sha256": "efde1ef034141abae9a7811acd7dd442363352d8b4221e7a2b3f766e4d6744a0"
+    },
+    {
+      "archive": "products/inspect/docs/audits/civicinspect-audit-full-2026-05-07.md",
+      "repo": "inspect",
+      "path": "docs/audits/civicinspect-audit-full-2026-05-07.md",
+      "sha256": "ac41ef3875ed842996f8eba1a7eb3374f6e733b8f5a6e6cdb0c8e504caf0b35c",
+      "status": "same",
+      "publication_sha256": "ac41ef3875ed842996f8eba1a7eb3374f6e733b8f5a6e6cdb0c8e504caf0b35c"
+    },
+    {
+      "archive": "products/inspect/docs/browser-qa-civicinspect-release-recovery-summary.md",
+      "repo": "inspect",
+      "path": "docs/browser-qa-civicinspect-release-recovery-summary.md",
+      "sha256": "cc8a8b0be88e699dcb96b3b7fd12ab0b144759ac646fcc9b95d76d1a1604d096",
+      "status": "same",
+      "publication_sha256": "cc8a8b0be88e699dcb96b3b7fd12ab0b144759ac646fcc9b95d76d1a1604d096"
+    },
+    {
+      "archive": "products/inspect/docs/browser-qa-civicinspect-v0.1.1-alignment-summary.md",
+      "repo": "inspect",
+      "path": "docs/browser-qa-civicinspect-v0.1.1-alignment-summary.md",
+      "sha256": "70faa7a173a5131a8a6037e38b6bcf729c1e2204ab329013b29821c3e83a4570",
+      "status": "same",
+      "publication_sha256": "70faa7a173a5131a8a6037e38b6bcf729c1e2204ab329013b29821c3e83a4570"
+    },
+    {
+      "archive": "products/inspect/docs/browser-qa-civicinspect-v1.0.0-summary.md",
+      "repo": "inspect",
+      "path": "docs/browser-qa-civicinspect-v1.0.0-summary.md",
+      "sha256": "915dc207e1647aa2eceb2bee759739353df6f3e65211ee03fdeaf653320ebd08",
+      "status": "same",
+      "publication_sha256": "915dc207e1647aa2eceb2bee759739353df6f3e65211ee03fdeaf653320ebd08"
+    },
+    {
+      "archive": "products/inspect/docs/browser-qa-production-depth-case-persistence-summary.md",
+      "repo": "inspect",
+      "path": "docs/browser-qa-production-depth-case-persistence-summary.md",
+      "sha256": "fd3335799d1b12625f824615dc6638fb6c145866db08501c3a8261c87dca2717",
+      "status": "same",
+      "publication_sha256": "fd3335799d1b12625f824615dc6638fb6c145866db08501c3a8261c87dca2717"
+    },
+    {
+      "archive": "products/inspect/docs/careful-work-civicinspect-v1.0.0.md",
+      "repo": "inspect",
+      "path": "docs/careful-work-civicinspect-v1.0.0.md",
+      "sha256": "b570a2feb7811c99de83e7207631284788d9e225fd269647850dd87b3f240ca8",
+      "status": "same",
+      "publication_sha256": "b570a2feb7811c99de83e7207631284788d9e225fd269647850dd87b3f240ca8"
+    },
+    {
+      "archive": "products/inspect/docs/github-discussions-seed.md",
+      "repo": "inspect",
+      "path": "docs/github-discussions-seed.md",
+      "sha256": "5a19a87239c8b93649a286d053f3b359f0e0e4cc6ccc28458db815aea0dde24f",
+      "status": "same",
+      "publication_sha256": "5a19a87239c8b93649a286d053f3b359f0e0e4cc6ccc28458db815aea0dde24f"
+    },
+    {
+      "archive": "products/inspect/docs/index.html",
+      "repo": "inspect",
+      "path": "docs/index.html",
+      "sha256": "dc04a63ec7a78dab5f52ddbe791a2d8f0ab81a0c13084724ed526b0fe616cde0",
+      "status": "same",
+      "publication_sha256": "cf4533ae0c4efb6ad94466113550385549806e41f41b1cd9cac21828737a15b9"
+    },
+    {
+      "archive": "products/inspect/docs/licensing/README.md",
+      "repo": "inspect",
+      "path": "docs/licensing/README.md",
+      "sha256": "31f03641dce7f8ac15ae03715dd93f5f5357543204232d0beefe0f73fcc678ba",
+      "status": "new",
+      "publication_sha256": "df2b5eb76d649fbe3792ccbfa3ea7615f2c417294793a399f6e76fd98e2bd295"
+    },
+    {
+      "archive": "products/inspect/docs/licensing/history/Public-Institution-Exception-1.0.md",
+      "repo": "inspect",
+      "path": "docs/licensing/history/Public-Institution-Exception-1.0.md",
+      "sha256": "8af2a3f7cbc186b31e10fecee3522854d524277c460646ba5544cc8e9acecfef",
+      "status": "new",
+      "publication_sha256": "8af2a3f7cbc186b31e10fecee3522854d524277c460646ba5544cc8e9acecfef"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/docs-desktop-console.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/docs-desktop-console.txt",
+      "sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb",
+      "status": "same",
+      "publication_sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/docs-desktop-page-errors.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/docs-desktop-page-errors.txt",
+      "sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72",
+      "status": "same",
+      "publication_sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/docs-mobile-console.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/docs-mobile-console.txt",
+      "sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb",
+      "status": "same",
+      "publication_sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/docs-mobile-page-errors.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/docs-mobile-page-errors.txt",
+      "sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72",
+      "status": "same",
+      "publication_sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/public-desktop-states-console.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/public-desktop-states-console.txt",
+      "sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb",
+      "status": "same",
+      "publication_sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/public-desktop-states-page-errors.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/public-desktop-states-page-errors.txt",
+      "sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72",
+      "status": "same",
+      "publication_sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/public-mobile-console.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/public-mobile-console.txt",
+      "sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb",
+      "status": "same",
+      "publication_sha256": "3e04d362564e57b15fa25c38845e067c65b62ab57ccdba9e5d09e5f1c0fa02fb"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/public-mobile-page-errors.txt",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/public-mobile-page-errors.txt",
+      "sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72",
+      "status": "same",
+      "publication_sha256": "c4263fe0686a526cb73925cd9cf819e9894cb39d89c646ad5bbc7c198eb8bc72"
+    },
+    {
+      "archive": "products/inspect/docs/qa/current-civicinspect-release-qa/summary.md",
+      "repo": "inspect",
+      "path": "docs/qa/current-civicinspect-release-qa/summary.md",
+      "sha256": "915dc207e1647aa2eceb2bee759739353df6f3e65211ee03fdeaf653320ebd08",
+      "status": "same",
+      "publication_sha256": "915dc207e1647aa2eceb2bee759739353df6f3e65211ee03fdeaf653320ebd08"
+    },
+    {
+      "archive": "products/inspect/docs/qa/demotion-browser-qa-2026-05-10/desktop-console.txt",
+      "repo": "inspect",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/desktop-console.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "same",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive": "products/inspect/docs/qa/demotion-browser-qa-2026-05-10/mobile-console.txt",
+      "repo": "inspect",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/mobile-console.txt",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "status": "same",
+      "publication_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "archive": "products/inspect/docs/qa/demotion-browser-qa-2026-05-10/summary.md",
+      "repo": "inspect",
+      "path": "docs/qa/demotion-browser-qa-2026-05-10/summary.md",
+      "sha256": "5b94240ad8b863acd5f8a8497c4575ce8f033c25cc9106666247a3331729177c",
+      "status": "same",
+      "publication_sha256": "5b94240ad8b863acd5f8a8497c4575ce8f033c25cc9106666247a3331729177c"
+    },
+    {
+      "archive": "products/inspect/docs/release-gate-audit-civicinspect-v1.0.0.md",
+      "repo": "inspect",
+      "path": "docs/release-gate-audit-civicinspect-v1.0.0.md",
+      "sha256": "8ea2f5dfd3e572cc9340b1a1c8daea134c2df9e4de9b0b95ec2a57b677c80924",
+      "status": "same",
+      "publication_sha256": "8ea2f5dfd3e572cc9340b1a1c8daea134c2df9e4de9b0b95ec2a57b677c80924"
+    },
+    {
+      "archive": "products/inspect/docs/release-integrity-correction-2026-05-21.md",
+      "repo": "inspect",
+      "path": "docs/release-integrity-correction-2026-05-21.md",
+      "sha256": "ce6abac71af1f25d5f9d6385a51d2fbe464ebdbe298d1441b909d35514af4847",
+      "status": "same",
+      "publication_sha256": "ce6abac71af1f25d5f9d6385a51d2fbe464ebdbe298d1441b909d35514af4847"
+    },
+    {
+      "archive": "products/inspect/docs/release-plan.md",
+      "repo": "inspect",
+      "path": "docs/release-plan.md",
+      "sha256": "8de7c6d5928bb9d189fed4c79379b64231f2cbc86dfe2cf0ade215339d15c0f7",
+      "status": "same",
+      "publication_sha256": "8de7c6d5928bb9d189fed4c79379b64231f2cbc86dfe2cf0ade215339d15c0f7"
+    },
+    {
+      "archive": "products/inspect/docs/release-recovery-status.md",
+      "repo": "inspect",
+      "path": "docs/release-recovery-status.md",
+      "sha256": "f7467e253e480045f2b900fef0ea1e04fa5342b7dadeb202d98d2bde65300b13",
+      "status": "same",
+      "publication_sha256": "f7467e253e480045f2b900fef0ea1e04fa5342b7dadeb202d98d2bde65300b13"
+    },
+    {
+      "archive": "products/inspect/patch_media.py",
+      "repo": "inspect",
+      "path": "patch_media.py",
+      "sha256": "38cc1027f33dc899ea82ae3fa4ea28bf841d680280463994a5e3d7b7ba7e8703",
+      "status": "new",
+      "publication_sha256": "38cc1027f33dc899ea82ae3fa4ea28bf841d680280463994a5e3d7b7ba7e8703"
+    },
+    {
+      "archive": "products/inspect/pyproject.toml",
+      "repo": "inspect",
+      "path": "pyproject.toml",
+      "sha256": "c4afe17700fb979d9109323e4bf99e657b8d345d898cb971537d3278cf9a3a33",
+      "status": "same",
+      "publication_sha256": "76119cf73669b951a7ab00c7199a9393371f128f8aaa794984c9c4eba2268b66"
+    },
+    {
+      "archive": "products/inspect/scripts/check-civiccore-placeholder-imports.py",
+      "repo": "inspect",
+      "path": "scripts/check-civiccore-placeholder-imports.py",
+      "sha256": "201f07b0e40c3233d9729e5ce237edcfc9d255878ab05091787e162d1a63499c",
+      "status": "same",
+      "publication_sha256": "201f07b0e40c3233d9729e5ce237edcfc9d255878ab05091787e162d1a63499c"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/__init__.py",
+      "repo": "inspect",
+      "path": "scripts/policy/__init__.py",
+      "sha256": "fe860d71e3b5d8d82c3982f4ff4d49f7b9471b7d966444387e4524665a455c10",
+      "status": "same",
+      "publication_sha256": "fe860d71e3b5d8d82c3982f4ff4d49f7b9471b7d966444387e4524665a455c10"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/agent_decision_gate.py",
+      "repo": "inspect",
+      "path": "scripts/policy/agent_decision_gate.py",
+      "sha256": "a5fb9a534853b90249e362a849ef571f60067db6081064ff517f71f62ad98b3c",
+      "status": "same",
+      "publication_sha256": "a5fb9a534853b90249e362a849ef571f60067db6081064ff517f71f62ad98b3c"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/auto_promote.py",
+      "repo": "inspect",
+      "path": "scripts/policy/auto_promote.py",
+      "sha256": "587a683b1aa5b882331130e8b3efa1429961c29e3e3e0262540d4503202e013b",
+      "status": "same",
+      "publication_sha256": "587a683b1aa5b882331130e8b3efa1429961c29e3e3e0262540d4503202e013b"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_actions_budget.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_actions_budget.py",
+      "sha256": "a5a01878dc184c8ad9fce6c720ca7ebcb884bef9a4b8f8cd41798291e760b8b5",
+      "status": "same",
+      "publication_sha256": "a5a01878dc184c8ad9fce6c720ca7ebcb884bef9a4b8f8cd41798291e760b8b5"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_adr_gate.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_adr_gate.py",
+      "sha256": "ab35e8a93ac9e56cfffb4363a51009cba22e1324c2d647afbfa350cbff85c4f0",
+      "status": "same",
+      "publication_sha256": "ab35e8a93ac9e56cfffb4363a51009cba22e1324c2d647afbfa350cbff85c4f0"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_allowed_paths.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_allowed_paths.py",
+      "sha256": "8cfceb5c3cd96d11319fc5c90fa2159a05f4f1cdac6662051de35768da86780a",
+      "status": "same",
+      "publication_sha256": "8cfceb5c3cd96d11319fc5c90fa2159a05f4f1cdac6662051de35768da86780a"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_decision_ledger.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_decision_ledger.py",
+      "sha256": "5ec2383b3bbb22a8a38c12fe2483290fc7411b492ba7f7fa6bdab31b6ad765e0",
+      "status": "same",
+      "publication_sha256": "5ec2383b3bbb22a8a38c12fe2483290fc7411b492ba7f7fa6bdab31b6ad765e0"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_directive_conformance.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_directive_conformance.py",
+      "sha256": "fee2961c1f115f3b5157e92d76425be52a3b7c8a7b1b716d0f76d6cf228190b7",
+      "status": "same",
+      "publication_sha256": "fee2961c1f115f3b5157e92d76425be52a3b7c8a7b1b716d0f76d6cf228190b7"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_execute_readiness.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_execute_readiness.py",
+      "sha256": "135daf346b24b5732737ac861ac1738e6c8b7fec7cd6ff96547783695467047c",
+      "status": "same",
+      "publication_sha256": "135daf346b24b5732737ac861ac1738e6c8b7fec7cd6ff96547783695467047c"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_manifest_schema.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_manifest_schema.py",
+      "sha256": "4085d00b4bb6a08cea8e5b7ce2f14272d7fcdbb484f779bcd4d18b860de701a3",
+      "status": "same",
+      "publication_sha256": "4085d00b4bb6a08cea8e5b7ce2f14272d7fcdbb484f779bcd4d18b860de701a3"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_no_todos.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_no_todos.py",
+      "sha256": "3e4a4755c3b7cb22d8ba3795f9fe294d0dd39780dbd7731765937a61ffc55a1c",
+      "status": "same",
+      "publication_sha256": "3e4a4755c3b7cb22d8ba3795f9fe294d0dd39780dbd7731765937a61ffc55a1c"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_pipeline_control_loop.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_pipeline_control_loop.py",
+      "sha256": "933af34fc5140cd03670f7c01a3da9d053d14c31618a46d299380bb65ccf3cfb",
+      "status": "same",
+      "publication_sha256": "933af34fc5140cd03670f7c01a3da9d053d14c31618a46d299380bb65ccf3cfb"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_plan_against_directive.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_plan_against_directive.py",
+      "sha256": "2e811cd097da03f922b8a29b1916ced1b8059313d5edcd8e581cb98c420518d8",
+      "status": "same",
+      "publication_sha256": "2e811cd097da03f922b8a29b1916ced1b8059313d5edcd8e581cb98c420518d8"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_plugin_install_acceptance.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_plugin_install_acceptance.py",
+      "sha256": "685c032c51e9eef56783f5aa374be4c31c15abb5a6bd0479a5f97648c537bf37",
+      "status": "same",
+      "publication_sha256": "685c032c51e9eef56783f5aa374be4c31c15abb5a6bd0479a5f97648c537bf37"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_release_docs_consistency.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_release_docs_consistency.py",
+      "sha256": "fe00ef16e86e5aebb52035475933678b706be58fdd7690e475c63b793a6a1cc6",
+      "status": "same",
+      "publication_sha256": "fe00ef16e86e5aebb52035475933678b706be58fdd7690e475c63b793a6a1cc6"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_rung_file_ownership.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_rung_file_ownership.py",
+      "sha256": "aeb80fdc31bd0d06f309328a5d5ae15b0b668488213eaa15a4476286d553f79d",
+      "status": "same",
+      "publication_sha256": "aeb80fdc31bd0d06f309328a5d5ae15b0b668488213eaa15a4476286d553f79d"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_scope_lock.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_scope_lock.py",
+      "sha256": "d64e6bd5a7ed3e14d14ff434390dea5fe5ead1fe92959694a8be325db0626992",
+      "status": "same",
+      "publication_sha256": "d64e6bd5a7ed3e14d14ff434390dea5fe5ead1fe92959694a8be325db0626992"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/check_skill_packaging.py",
+      "repo": "inspect",
+      "path": "scripts/policy/check_skill_packaging.py",
+      "sha256": "88460d46f549eb4038fdf96aceefc0d53ed25db5e16552185d1e0c641143d681",
+      "status": "same",
+      "publication_sha256": "88460d46f549eb4038fdf96aceefc0d53ed25db5e16552185d1e0c641143d681"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/directive_utils.py",
+      "repo": "inspect",
+      "path": "scripts/policy/directive_utils.py",
+      "sha256": "115bb513bf32d8bb21a52566385010b1a878729fb3dff30365bbb40514a6287c",
+      "status": "same",
+      "publication_sha256": "115bb513bf32d8bb21a52566385010b1a878729fb3dff30365bbb40514a6287c"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/final_response_gate.py",
+      "repo": "inspect",
+      "path": "scripts/policy/final_response_gate.py",
+      "sha256": "da1f55fe0fd8e92e8550c7503e69d5ec83064a2c70bc93194bc3aa56670cba0b",
+      "status": "same",
+      "publication_sha256": "da1f55fe0fd8e92e8550c7503e69d5ec83064a2c70bc93194bc3aa56670cba0b"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/pipeline_continue.py",
+      "repo": "inspect",
+      "path": "scripts/policy/pipeline_continue.py",
+      "sha256": "f237a8ec107feef567bec214ec370ae837f09fd7033f4d543dd90d4fa0502dad",
+      "status": "same",
+      "publication_sha256": "f237a8ec107feef567bec214ec370ae837f09fd7033f4d543dd90d4fa0502dad"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/policy_utils.py",
+      "repo": "inspect",
+      "path": "scripts/policy/policy_utils.py",
+      "sha256": "2bd468353ecdf0f93dabb06305b9b214a5c2be24c36c2133b782ca656fa2ed5b",
+      "status": "same",
+      "publication_sha256": "2bd468353ecdf0f93dabb06305b9b214a5c2be24c36c2133b782ca656fa2ed5b"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/preflight_infrastructure.py",
+      "repo": "inspect",
+      "path": "scripts/policy/preflight_infrastructure.py",
+      "sha256": "ac6f7cfc76b9940db3e6d6ae5949ac1ce027a70480167024b46be6536f664e9e",
+      "status": "same",
+      "publication_sha256": "ac6f7cfc76b9940db3e6d6ae5949ac1ce027a70480167024b46be6536f664e9e"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/run_all.py",
+      "repo": "inspect",
+      "path": "scripts/policy/run_all.py",
+      "sha256": "6ba9ab17d789d64067613f9271465416102bffd0d2424ff16bb18d37d625e3c4",
+      "status": "same",
+      "publication_sha256": "6ba9ab17d789d64067613f9271465416102bffd0d2424ff16bb18d37d625e3c4"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/scope_lock_utils.py",
+      "repo": "inspect",
+      "path": "scripts/policy/scope_lock_utils.py",
+      "sha256": "37db3f91d0d220ce9960306bfd62526108c459ce69849067cd75b6206bc902a8",
+      "status": "same",
+      "publication_sha256": "37db3f91d0d220ce9960306bfd62526108c459ce69849067cd75b6206bc902a8"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/show_run_status.py",
+      "repo": "inspect",
+      "path": "scripts/policy/show_run_status.py",
+      "sha256": "b43db683266a14393bb0e08210f4aeffcf51052f3c6f3b8f74e909897d0a40d6",
+      "status": "same",
+      "publication_sha256": "b43db683266a14393bb0e08210f4aeffcf51052f3c6f3b8f74e909897d0a40d6"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/stop_validator.py",
+      "repo": "inspect",
+      "path": "scripts/policy/stop_validator.py",
+      "sha256": "b97613e1d82010658a33f9846380670e6ccf2ee4a51d7375d8bcc41ee3d65a41",
+      "status": "same",
+      "publication_sha256": "b97613e1d82010658a33f9846380670e6ccf2ee4a51d7375d8bcc41ee3d65a41"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/validate_manifest.py",
+      "repo": "inspect",
+      "path": "scripts/policy/validate_manifest.py",
+      "sha256": "a941e7d6b221557395b70d5b8777d934545bcde19ce7cf2e865a474325892e6d",
+      "status": "same",
+      "publication_sha256": "a941e7d6b221557395b70d5b8777d934545bcde19ce7cf2e865a474325892e6d"
+    },
+    {
+      "archive": "products/inspect/scripts/policy/verify_plugin_release.py",
+      "repo": "inspect",
+      "path": "scripts/policy/verify_plugin_release.py",
+      "sha256": "c51343ca1f68a884ff1db30d1650505ca05ebaa960d7c6776df367dd8f36060a",
+      "status": "same",
+      "publication_sha256": "c51343ca1f68a884ff1db30d1650505ca05ebaa960d7c6776df367dd8f36060a"
+    },
+    {
+      "archive": "products/inspect/tests/fixtures/inspection-photo.png",
+      "repo": "inspect",
+      "path": "tests/fixtures/inspection-photo.png",
+      "sha256": "89480fad8097f8b8292189fdbe17d4b93afdc7bf5d7301b661c63e7f0d7c038c",
+      "status": "new",
+      "publication_sha256": "89480fad8097f8b8292189fdbe17d4b93afdc7bf5d7301b661c63e7f0d7c038c"
+    },
+    {
+      "archive": "products/inspect/tests/fixtures/media-digests.json",
+      "repo": "inspect",
+      "path": "tests/fixtures/media-digests.json",
+      "sha256": "4b0adb0e9937a3d4a9c12565054201494b0baf9202ebe8fa3c9b921bbaaab852",
+      "status": "new",
+      "publication_sha256": "14a0e3b098fd2008313c245dd44a84418f725dc35e6dd4cb24ceb05c12c22e03"
+    },
+    {
+      "archive": "products/inspect/tests/test_analysis_join.py",
+      "repo": "inspect",
+      "path": "tests/test_analysis_join.py",
+      "sha256": "1b57d657ba724e6426eef99f6a44215549a4695bc0ab7e6fddce57883e1b04d3",
+      "status": "new",
+      "publication_sha256": "1b57d657ba724e6426eef99f6a44215549a4695bc0ab7e6fddce57883e1b04d3"
+    },
+    {
+      "archive": "products/inspect/tests/test_connected_workflow.py",
+      "repo": "inspect",
+      "path": "tests/test_connected_workflow.py",
+      "sha256": "837c3e384f2545d715ddc31b75ae918d9354a8e41d96b485da734d78479f21cf",
+      "status": "same",
+      "publication_sha256": "837c3e384f2545d715ddc31b75ae918d9354a8e41d96b485da734d78479f21cf"
+    },
+    {
+      "archive": "products/inspect/tests/test_inspect_foundation.py",
+      "repo": "inspect",
+      "path": "tests/test_inspect_foundation.py",
+      "sha256": "725667e7ed3fd277a461ef33e2832a71947ceb44bc6bebd73d0c9289ea723ab9",
+      "status": "same",
+      "publication_sha256": "725667e7ed3fd277a461ef33e2832a71947ceb44bc6bebd73d0c9289ea723ab9"
+    },
+    {
+      "archive": "products/inspect/tests/test_integration_adversarial_mocks.py",
+      "repo": "inspect",
+      "path": "tests/test_integration_adversarial_mocks.py",
+      "sha256": "15b839cc792dcb38acce65c8cbccf98e6193b1a4a48c13b692e30ba29a6e4275",
+      "status": "same",
+      "publication_sha256": "15b839cc792dcb38acce65c8cbccf98e6193b1a4a48c13b692e30ba29a6e4275"
+    },
+    {
+      "archive": "products/inspect/tests/test_media_analysis.py",
+      "repo": "inspect",
+      "path": "tests/test_media_analysis.py",
+      "sha256": "2d7cdc97e2c513fcd668b9e44d4312e7910cd0cbf19eb6b7198e079c4a5264c0",
+      "status": "new",
+      "publication_sha256": "2d7cdc97e2c513fcd668b9e44d4312e7910cd0cbf19eb6b7198e079c4a5264c0"
+    },
+    {
+      "archive": "products/inspect/tests/test_production_depth_case_persistence.py",
+      "repo": "inspect",
+      "path": "tests/test_production_depth_case_persistence.py",
+      "sha256": "d9a75f0e964a465e45338fe75aba0db8e60cadbd268cb572d0d77556ae2ffe65",
+      "status": "same",
+      "publication_sha256": "d9a75f0e964a465e45338fe75aba0db8e60cadbd268cb572d0d77556ae2ffe65"
+    },
+    {
+      "archive": "products/inspect/tests/test_runtime_foundation.py",
+      "repo": "inspect",
+      "path": "tests/test_runtime_foundation.py",
+      "sha256": "4f272a3b8ba3bfe5baaf1f0cbe9f06e5e54bfae8d419dc482bed9d7d9c2c5a4b",
+      "status": "changed",
+      "publication_sha256": "3ebe97c1a2646cec357fa1788341cc2a2d96c1330ad0fc92ddfebf92fe04603c"
+    },
+    {
+      "archive": "products/inspect/tests/test_transcription_adapter.py",
+      "repo": "inspect",
+      "path": "tests/test_transcription_adapter.py",
+      "sha256": "44faba7cba85b6ad273cb3aba35fe1cb45ce21c7635649999c326d909608fd80",
+      "status": "new",
+      "publication_sha256": "44faba7cba85b6ad273cb3aba35fe1cb45ce21c7635649999c326d909608fd80"
+    },
+    {
+      "archive": "products/inspection-transcriber/LICENSE",
+      "repo": "inspect",
+      "path": "inspection-transcriber/LICENSE",
+      "sha256": "e0eedba615d5cd1b986afb6c5b3a4b1ae33713e7e9dc74d19daec5e3221f9d2e",
+      "status": "new",
+      "publication_sha256": "0d96a4ff68ad6d4b6f1f30f713b18d5184912ba8dd389f86aa7710db079abcb0"
+    },
+    {
+      "archive": "products/inspection-transcriber/README.md",
+      "repo": "inspect",
+      "path": "inspection-transcriber/README.md",
+      "sha256": "f11b9bda79ec5273000c9e3616252c2cfa6795809b70af50121a25efbe6aac2b",
+      "status": "new",
+      "publication_sha256": "2f51e020837713d5474d0fb8864ed397b4bd4f498d7e9a091b62b8ede84bf82c"
+    },
+    {
+      "archive": "products/inspection-transcriber/TEXTFLOWKIT-ORIGINAL-LICENSE.txt",
+      "repo": "inspect",
+      "path": "inspection-transcriber/TEXTFLOWKIT-ORIGINAL-LICENSE.txt",
+      "sha256": "b8676920a9b5dd9fce829f11f07e3c08201cdcfc874e7a9ab2e163d1f64d5253",
+      "status": "new",
+      "publication_sha256": "8c6db340475136df3c1201d458fa5755698eace76e510471ecc9d857d6083dac"
+    },
+    {
+      "archive": "products/inspection-transcriber/pyproject.toml",
+      "repo": "inspect",
+      "path": "inspection-transcriber/pyproject.toml",
+      "sha256": "7e82772fa98d70262507ece6bef6c3e2aa5bbdf7e4a91b56c47a1e004721678f",
+      "status": "new",
+      "publication_sha256": "85408401d8cf27cc21dbfc7729f27a5f8d7d945f043b310d5e9be8c219a3fc31"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/__init__.py",
+      "sha256": "df9f785737c691127c79ba8fa5a5c1b46526cd0c31e55ab6a2db0fd051f21670",
+      "status": "new",
+      "publication_sha256": "df9f785737c691127c79ba8fa5a5c1b46526cd0c31e55ab6a2db0fd051f21670"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/adapters/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/__init__.py",
+      "sha256": "15c26e4f34c38c002ab513d9ba9a111d54376f9b10e9919ef96258c1ac43ae3b",
+      "status": "new",
+      "publication_sha256": "a31ef24d07f308d407f62b454457fac5e0922303003e8c5d4f842c29dde58198"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/adapters/http_server.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/http_server.py",
+      "sha256": "21668b5f732f63abc1f783ae7080d6fff146904cf927108f42fa377d19b610ba",
+      "status": "new",
+      "publication_sha256": "330db733809e4dd10252b672cb496209fa5d985afd3d0a86754e2b6f5c0e1326"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/adapters/mcp_server.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/mcp_server.py",
+      "sha256": "4e179e239e936e3e1a816605c73b6f8072fae22726fc6c405ac745b156b0b320",
+      "status": "new",
+      "publication_sha256": "4e179e239e936e3e1a816605c73b6f8072fae22726fc6c405ac745b156b0b320"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/adapters/streaming_ws.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/streaming_ws.py",
+      "sha256": "10c22bfd4dbb75e405cead293456f4ecec083a377d7bb9d5bb45f1db5ba792ab",
+      "status": "new",
+      "publication_sha256": "10c22bfd4dbb75e405cead293456f4ecec083a377d7bb9d5bb45f1db5ba792ab"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/assets/README.md",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/assets/README.md",
+      "sha256": "53a3fdf87fdc0de1fe8f30c6ac75f057931137e51d38000b7f766ded49bb8ea8",
+      "status": "new",
+      "publication_sha256": "53a3fdf87fdc0de1fe8f30c6ac75f057931137e51d38000b7f766ded49bb8ea8"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/cli.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/cli.py",
+      "sha256": "dbd4aad74c2a18de1c86f63b896aa10b55c79188d698e7d21005c632541a7991",
+      "status": "new",
+      "publication_sha256": "1a697f9d27c4ba9935175dd2a974f38807fc698cde0abaa9fbffd0f692d4f0d0"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/__init__.py",
+      "sha256": "073f31f0045a8beb1ead47f496365de57aa351ae911165f22eeab00ec92c7626",
+      "status": "new",
+      "publication_sha256": "7813f116c86a2335c39f393e2d0e0e67fa88b53fb7e97a224e166896ab1e79e1"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/batch.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/batch.py",
+      "sha256": "e2c96eacfcfc96fbe4368d742a45e83e50ad609b82aee6f47d5b2180039bda4c",
+      "status": "new",
+      "publication_sha256": "e2c96eacfcfc96fbe4368d742a45e83e50ad609b82aee6f47d5b2180039bda4c"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/bind.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/bind.py",
+      "sha256": "ef80612788ad6bd2bd4887859f563c611d5bf25294203c18a4108bb9c1185a6a",
+      "status": "new",
+      "publication_sha256": "ef80612788ad6bd2bd4887859f563c611d5bf25294203c18a4108bb9c1185a6a"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/cancel.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/cancel.py",
+      "sha256": "ce053295297acaaa305ec6ec8a3628d7848dccd2d969374ca91956dc27c39f79",
+      "status": "new",
+      "publication_sha256": "a2e135f044c336a7ba0a69965ee0df536b0a551cb7d757585b85d0d9bfe68892"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/checkpoint.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/checkpoint.py",
+      "sha256": "2788443880005d2e0bdb4ffe6bd98c45bf5c47a444a59955bbac65182fc544d2",
+      "status": "new",
+      "publication_sha256": "2788443880005d2e0bdb4ffe6bd98c45bf5c47a444a59955bbac65182fc544d2"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/diarize.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/diarize.py",
+      "sha256": "f8a86b6488e27a6ad345f1bf9d9e17b7283fb97d59c248de97b198e6989a6430",
+      "status": "new",
+      "publication_sha256": "f8a86b6488e27a6ad345f1bf9d9e17b7283fb97d59c248de97b198e6989a6430"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/engine.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/engine.py",
+      "sha256": "5638082ebba71616e8aa9a1657bb0bbf41c162625c7e09178a6318caf2667291",
+      "status": "new",
+      "publication_sha256": "5638082ebba71616e8aa9a1657bb0bbf41c162625c7e09178a6318caf2667291"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/executor.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/executor.py",
+      "sha256": "611c39f727ef82f901538e8163f0ce955ad1e18673de39b1cad8ed6543d8e81a",
+      "status": "new",
+      "publication_sha256": "611c39f727ef82f901538e8163f0ce955ad1e18673de39b1cad8ed6543d8e81a"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/jobs.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/jobs.py",
+      "sha256": "0201d66ce298bea7f1cba6c51a4abcf8c69e4aba1fda252151a5a01ff04f26ef",
+      "status": "new",
+      "publication_sha256": "0201d66ce298bea7f1cba6c51a4abcf8c69e4aba1fda252151a5a01ff04f26ef"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/model.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/model.py",
+      "sha256": "b69da042665e2c2359f4228a3217a9d3e5a130f07d0a0f1874e6de971d700e05",
+      "status": "new",
+      "publication_sha256": "b69da042665e2c2359f4228a3217a9d3e5a130f07d0a0f1874e6de971d700e05"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/paths.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/paths.py",
+      "sha256": "3445077078de184596273f5a573ae920e13085e0899bd7bced516948568d2652",
+      "status": "new",
+      "publication_sha256": "3445077078de184596273f5a573ae920e13085e0899bd7bced516948568d2652"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/pipeline.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/pipeline.py",
+      "sha256": "0b427e8bb4ad1a404d84926cd2b3235e45aa338b264769bc00d6da641886f5e7",
+      "status": "new",
+      "publication_sha256": "0b427e8bb4ad1a404d84926cd2b3235e45aa338b264769bc00d6da641886f5e7"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/privacy.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/privacy.py",
+      "sha256": "1f9d798ae281ff415cd483ba25bfc53ccda80a657cca548ad80ebd2dd38a2b87",
+      "status": "new",
+      "publication_sha256": "1f9d798ae281ff415cd483ba25bfc53ccda80a657cca548ad80ebd2dd38a2b87"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/retrieval.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/retrieval.py",
+      "sha256": "9e6dbad9478a071a6311164f5a4d3fd9990abe74ef274ec95fe8b2f8be85335d",
+      "status": "new",
+      "publication_sha256": "9e6dbad9478a071a6311164f5a4d3fd9990abe74ef274ec95fe8b2f8be85335d"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/runner.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/runner.py",
+      "sha256": "d97799725f67af31c9f8a43bc07c3afa2d62b49aa1df454accdf66c454c28785",
+      "status": "new",
+      "publication_sha256": "d97799725f67af31c9f8a43bc07c3afa2d62b49aa1df454accdf66c454c28785"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/service.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/service.py",
+      "sha256": "d97b38e0640bae6b1abc1edc29fc05eb6638ddc053855a9b6c0aa8e497214446",
+      "status": "new",
+      "publication_sha256": "d97b38e0640bae6b1abc1edc29fc05eb6638ddc053855a9b6c0aa8e497214446"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/sqlite_store.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/sqlite_store.py",
+      "sha256": "aeb0fb42ebc5bbe4e4f2ca5612fafdf3a6123da75c229a46fd35f75faae40d47",
+      "status": "new",
+      "publication_sha256": "aeb0fb42ebc5bbe4e4f2ca5612fafdf3a6123da75c229a46fd35f75faae40d47"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/startup.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/startup.py",
+      "sha256": "fbfd24367deb5c6e4d085578e186c60fc37ec0b53a6e0c2505db76bd57da03ed",
+      "status": "new",
+      "publication_sha256": "fbfd24367deb5c6e4d085578e186c60fc37ec0b53a6e0c2505db76bd57da03ed"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/stream_worker.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/stream_worker.py",
+      "sha256": "70dec8436541d0da13eb40d32b4f7b0672674dae962adb27aad9199b5c990499",
+      "status": "new",
+      "publication_sha256": "70dec8436541d0da13eb40d32b4f7b0672674dae962adb27aad9199b5c990499"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/streaming.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming.py",
+      "sha256": "d2fc7e3968faaec04973f1de843c9b3484ae193cdb610146ef4a93f2335bdb69",
+      "status": "new",
+      "publication_sha256": "d2fc7e3968faaec04973f1de843c9b3484ae193cdb610146ef4a93f2335bdb69"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/streaming_assets.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming_assets.py",
+      "sha256": "9cb2de1b26a2fbb23b09db502165c2f5855b68be67394d8e59c2e5050993dd88",
+      "status": "new",
+      "publication_sha256": "9cb2de1b26a2fbb23b09db502165c2f5855b68be67394d8e59c2e5050993dd88"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/streaming_events.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming_events.py",
+      "sha256": "c95f62973bc256076508c6364b0331628349db2a11e0a04c2dfb232ae3b77eeb",
+      "status": "new",
+      "publication_sha256": "c95f62973bc256076508c6364b0331628349db2a11e0a04c2dfb232ae3b77eeb"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/streaming_process.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming_process.py",
+      "sha256": "4ed1bd70c1ccfce30035042ddbdb5a41081145b61d14363bb42c2b9c7f5bb3ca",
+      "status": "new",
+      "publication_sha256": "4ed1bd70c1ccfce30035042ddbdb5a41081145b61d14363bb42c2b9c7f5bb3ca"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/submission.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/submission.py",
+      "sha256": "951b9a5ab7210775ff6bfc36d11e21840b29bb1ba17a5e87f9e120bfaf87fadf",
+      "status": "new",
+      "publication_sha256": "951b9a5ab7210775ff6bfc36d11e21840b29bb1ba17a5e87f9e120bfaf87fadf"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/timeutil.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/timeutil.py",
+      "sha256": "9c3323fcbeb6393108f61d8cd99d627073828d64994ff26e33dd6d1f2e7537bd",
+      "status": "new",
+      "publication_sha256": "dd3029383015350b18317fcf7ec08c69153eb6d9aa8c110a41972a2c773a1141"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/translate.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/translate.py",
+      "sha256": "3b421a966987e7d429f05cc60d924d7ee7043d21f1d70fd6b9a523a020c06a12",
+      "status": "new",
+      "publication_sha256": "3b421a966987e7d429f05cc60d924d7ee7043d21f1d70fd6b9a523a020c06a12"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/whistle.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/whistle.py",
+      "sha256": "5ea2fb20699ee46e941e783d67448db310bc01a561edfbaf95dc95d9e4396199",
+      "status": "new",
+      "publication_sha256": "5ea2fb20699ee46e941e783d67448db310bc01a561edfbaf95dc95d9e4396199"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/whistle_assets.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/whistle_assets.py",
+      "sha256": "8aedf499b95f8da7fe563db1588ff650a2245a8b97d2e26afbc06979f2d99e48",
+      "status": "new",
+      "publication_sha256": "03dd8755eb2a1fafedbe22f37586be0c07fdbc1898853052b95cb2555a3e8d99"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/core/windows_process.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/windows_process.py",
+      "sha256": "ca8c11fb58906f63ee45a2c67b4999a7cb229b64992a5a7512b72bcd78b76a2a",
+      "status": "new",
+      "publication_sha256": "ca8c11fb58906f63ee45a2c67b4999a7cb229b64992a5a7512b72bcd78b76a2a"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/__init__.py",
+      "sha256": "5989cf0be8cfd244ddcf3d8cd512e5538e6ddcaf02fbec61dd81e1c12a14425c",
+      "status": "new",
+      "publication_sha256": "5989cf0be8cfd244ddcf3d8cd512e5538e6ddcaf02fbec61dd81e1c12a14425c"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/_cue_layout.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_cue_layout.py",
+      "sha256": "e849039c37652b9bbd6a7da93555a4de22af142e4dfc47252c0bc7f6cdcda054",
+      "status": "new",
+      "publication_sha256": "e849039c37652b9bbd6a7da93555a4de22af142e4dfc47252c0bc7f6cdcda054"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/_cue_text.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_cue_text.py",
+      "sha256": "09a7cbfff907bf5deba6e14804e1c2d905a00f0bee34a012a8b666fee6df777b",
+      "status": "new",
+      "publication_sha256": "09a7cbfff907bf5deba6e14804e1c2d905a00f0bee34a012a8b666fee6df777b"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/_rename_excl.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_rename_excl.py",
+      "sha256": "313209d1cbc93be245540c6a84eb7bffe88c5ead6c7bee37b211470623ec42c3",
+      "status": "new",
+      "publication_sha256": "313209d1cbc93be245540c6a84eb7bffe88c5ead6c7bee37b211470623ec42c3"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/_rename_noreplace.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_rename_noreplace.py",
+      "sha256": "3349c5e6e447432eab528e1cd4699e6dc16968b41b1d8c063cfbce45de275c83",
+      "status": "new",
+      "publication_sha256": "3349c5e6e447432eab528e1cd4699e6dc16968b41b1d8c063cfbce45de275c83"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/docx.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/docx.py",
+      "sha256": "f0aa899a4d17e8739dd863e388e240b6379aff365ff8c9a92da0499a446485d5",
+      "status": "new",
+      "publication_sha256": "6f68b5f009bfaafd646c741711d5e2b2eaa1c778c95e8e0339baffb33dcf05f4"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/markdown.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/markdown.py",
+      "sha256": "fb86894bf9ab6ca411ae13737a703fb5d9e0d15298e4387a9767180d894cd5ba",
+      "status": "new",
+      "publication_sha256": "772239958bdaaaf0dda6988f2f43b72bdd853f0d8ab409f9bef73bd2765a5a87"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/pdf.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/pdf.py",
+      "sha256": "bc17222116c14934116d3b32ee4a94d507dbca8329282f7033f9068c27e8b0a4",
+      "status": "new",
+      "publication_sha256": "bc17222116c14934116d3b32ee4a94d507dbca8329282f7033f9068c27e8b0a4"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/srt.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/srt.py",
+      "sha256": "b50c3fcb915386a634336b72f623fd41fc44f1a6cf3a21499e2f874631a9d3f9",
+      "status": "new",
+      "publication_sha256": "b50c3fcb915386a634336b72f623fd41fc44f1a6cf3a21499e2f874631a9d3f9"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/txt.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/txt.py",
+      "sha256": "07c1a16566b5c71346f788eb940263408edc1d6b133ce0909b3cc899d89029ff",
+      "status": "new",
+      "publication_sha256": "07c1a16566b5c71346f788eb940263408edc1d6b133ce0909b3cc899d89029ff"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/render/vtt.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/vtt.py",
+      "sha256": "8975154d8968f4700c352571fbc0fc2b39d0b1b6686d06e7d6c366b48e5385cb",
+      "status": "new",
+      "publication_sha256": "8975154d8968f4700c352571fbc0fc2b39d0b1b6686d06e7d6c366b48e5385cb"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/sources/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/__init__.py",
+      "sha256": "b55077d4566dceedb09b84fbe6e3bf2da3f2598affc482ba6157f059204c1d1e",
+      "status": "new",
+      "publication_sha256": "3db5e52f773bfd1079cbfd5162056e6ae863b6c610a304a2a30b2f97240f7171"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/sources/acquire.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/acquire.py",
+      "sha256": "c5ac9a8aad2dbe5ae6b49f52ada34869aef3152faa63f9c4a720e1f09fc05494",
+      "status": "new",
+      "publication_sha256": "c5ac9a8aad2dbe5ae6b49f52ada34869aef3152faa63f9c4a720e1f09fc05494"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/sources/detect.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/detect.py",
+      "sha256": "4bb5ebbaebe3cf3ad71cbf2569640f043ec88d829857f0098df386e6df5ba8bc",
+      "status": "new",
+      "publication_sha256": "4bb5ebbaebe3cf3ad71cbf2569640f043ec88d829857f0098df386e6df5ba8bc"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/sources/scratch.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/scratch.py",
+      "sha256": "35b89fd398d2c1300f9a249c1e70e92637fdffc92450af8ec9ba39fadd457dcb",
+      "status": "new",
+      "publication_sha256": "35b89fd398d2c1300f9a249c1e70e92637fdffc92450af8ec9ba39fadd457dcb"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/__init__.py",
+      "sha256": "57064615e52223f9968d214f30426c4fe4ce1fbca0bd455e953b5a75e190955d",
+      "status": "new",
+      "publication_sha256": "57064615e52223f9968d214f30426c4fe4ce1fbca0bd455e953b5a75e190955d"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/app.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/app.py",
+      "sha256": "d45c15c6e7b7e40f2762b5ad332e1a16feb286fcb089e891b6b37903b9beff59",
+      "status": "new",
+      "publication_sha256": "d45c15c6e7b7e40f2762b5ad332e1a16feb286fcb089e891b6b37903b9beff59"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/capabilities.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/capabilities.py",
+      "sha256": "8beeab8f4036c64fbbc7c656466f5f454594cf39fd8cb8c80c8c05310ba9fa62",
+      "status": "new",
+      "publication_sha256": "8beeab8f4036c64fbbc7c656466f5f454594cf39fd8cb8c80c8c05310ba9fa62"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/cleanup.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/cleanup.py",
+      "sha256": "0296c8e54672966915b9fb20ad999e8dafdde5fd48225bda947d3fb3df07e333",
+      "status": "new",
+      "publication_sha256": "0296c8e54672966915b9fb20ad999e8dafdde5fd48225bda947d3fb3df07e333"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/launcher.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/launcher.py",
+      "sha256": "eb5542ec38eaa9ceed251209b03c273eb76cfa082c930c49c931d85ecb695af1",
+      "status": "new",
+      "publication_sha256": "eb5542ec38eaa9ceed251209b03c273eb76cfa082c930c49c931d85ecb695af1"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/ownership.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/ownership.py",
+      "sha256": "1fb31a271df793d6c406c7e3ede249414eb37333478b87cd52a88169a45e85db",
+      "status": "new",
+      "publication_sha256": "1fb31a271df793d6c406c7e3ede249414eb37333478b87cd52a88169a45e85db"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/paths.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/paths.py",
+      "sha256": "8eedfe456de4b5e14669a3f74367b2a06cf8b9ee2afff37f8df592a81b7af05f",
+      "status": "new",
+      "publication_sha256": "8eedfe456de4b5e14669a3f74367b2a06cf8b9ee2afff37f8df592a81b7af05f"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/security.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/security.py",
+      "sha256": "6b5f6116170d9eb0d0a2ebdd4fb7d1d686fb51b5fcde7d056524d638f2939925",
+      "status": "new",
+      "publication_sha256": "6b5f6116170d9eb0d0a2ebdd4fb7d1d686fb51b5fcde7d056524d638f2939925"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/static/app.css",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/app.css",
+      "sha256": "eb1c492069b035020081946228371e6fabf3fa0525e6c3862da5182c20a2d6b9",
+      "status": "new",
+      "publication_sha256": "eb1c492069b035020081946228371e6fabf3fa0525e6c3862da5182c20a2d6b9"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/static/app.js",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/app.js",
+      "sha256": "6b16b31398514df54fc4932be33cf36f8c465524130f845619f9ebe3dc697d64",
+      "status": "new",
+      "publication_sha256": "6b16b31398514df54fc4932be33cf36f8c465524130f845619f9ebe3dc697d64"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/static/cleanup.js",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/cleanup.js",
+      "sha256": "2660359033e77659a1d4a5b823e8f9d61ab2021deef09e03fadcfc312d0013d7",
+      "status": "new",
+      "publication_sha256": "2660359033e77659a1d4a5b823e8f9d61ab2021deef09e03fadcfc312d0013d7"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/static/index.html",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/index.html",
+      "sha256": "f7dc75c81c6095839922aeea4a91e425c153acffaf69888c06c2949dfd4fffc3",
+      "status": "new",
+      "publication_sha256": "f7dc75c81c6095839922aeea4a91e425c153acffaf69888c06c2949dfd4fffc3"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/static/streaming-capture-worklet.js",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/streaming-capture-worklet.js",
+      "sha256": "0a7d6795ba0ac008f1a172b16c4c7f682f234b350b259fb779fec5df9b441c14",
+      "status": "new",
+      "publication_sha256": "0a7d6795ba0ac008f1a172b16c4c7f682f234b350b259fb779fec5df9b441c14"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/static/streaming-example.html",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/streaming-example.html",
+      "sha256": "64a99627e292f1f22af4fe1ef759fbc410e1db5939b732adcb475755fc92ef8f",
+      "status": "new",
+      "publication_sha256": "64a99627e292f1f22af4fe1ef759fbc410e1db5939b732adcb475755fc92ef8f"
+    },
+    {
+      "archive": "products/inspection-transcriber/src/textflowkit/ui/uploads.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/uploads.py",
+      "sha256": "94da5ebfe1ee50c2101eec09432bb04578cf163cebeedd85ef265290f13235f8",
+      "status": "new",
+      "publication_sha256": "94da5ebfe1ee50c2101eec09432bb04578cf163cebeedd85ef265290f13235f8"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/__init__.py",
+      "repo": "inspect",
+      "path": "civicinspect/__init__.py",
+      "sha256": "eff685acecf3985653f811403aaabc6862d52ce7e343c38aa5242f40d4266c47",
+      "status": "changed",
+      "publication_sha256": "6d591ac51b23a6f3ec20fab89129e04230f119961269f6f4e5e5742b15d70092"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/_whistle_driver.py",
+      "repo": "inspect",
+      "path": "civicinspect/_whistle_driver.py",
+      "sha256": "90ce9276c7d1de4d3259a2c00ff581e5d55d28dd8da913ed7b8bd2d7c89a5264",
+      "status": "new",
+      "publication_sha256": "90ce9276c7d1de4d3259a2c00ff581e5d55d28dd8da913ed7b8bd2d7c89a5264"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/adapters.py",
+      "repo": "inspect",
+      "path": "civicinspect/adapters.py",
+      "sha256": "ab76d8c1a8b57167acf759390b49a3941f04b4483a606be2abbae69f4f8165db",
+      "status": "new",
+      "publication_sha256": "ab76d8c1a8b57167acf759390b49a3941f04b4483a606be2abbae69f4f8165db"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/case_lookup.py",
+      "repo": "inspect",
+      "path": "civicinspect/case_lookup.py",
+      "sha256": "b68030ecdf6a7f83ed35aec636afcb70c5ce247a40ed7d60a3283655bfdb3214",
+      "status": "same",
+      "publication_sha256": "b68030ecdf6a7f83ed35aec636afcb70c5ce247a40ed7d60a3283655bfdb3214"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/connections.py",
+      "repo": "inspect",
+      "path": "civicinspect/connections.py",
+      "sha256": "82221673e19e1bd48215cfc9dbeab837070cd9a6bdd3f3cf57cf3034f3ac3bef",
+      "status": "changed",
+      "publication_sha256": "a32e5723ed2b93b0e72a6659ac0db8f614db1be7cc5cb4881a40b9abdff85e60"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/integration_mocks.py",
+      "repo": "inspect",
+      "path": "civicinspect/integration_mocks.py",
+      "sha256": "dfc700d977badb104db5abddded3120b1bff99445a6bbf18f7a6925c9087c797",
+      "status": "same",
+      "publication_sha256": "dfc700d977badb104db5abddded3120b1bff99445a6bbf18f7a6925c9087c797"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/main.py",
+      "repo": "inspect",
+      "path": "civicinspect/main.py",
+      "sha256": "16306b47d0e6e526176c050b2eb2edb6a047edea3bb5f313df48c026a81cc53e",
+      "status": "changed",
+      "publication_sha256": "16306b47d0e6e526176c050b2eb2edb6a047edea3bb5f313df48c026a81cc53e"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/media_analysis.py",
+      "repo": "inspect",
+      "path": "civicinspect/media_analysis.py",
+      "sha256": "be51101ee98596bca3055f99136531e3a76e28f2dc584148cf26098d75a94c5a",
+      "status": "new",
+      "publication_sha256": "970a05a149589f8d6cda712fe14d161df079d4ed32205a0086217a877bb6cead"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/migrations/__init__.py",
+      "repo": "inspect",
+      "path": "civicinspect/migrations/__init__.py",
+      "sha256": "e18fc02330135cd7d0dd678a3e17f9e81966a9e187c3ed0ec002439fa8d3bbb1",
+      "status": "changed",
+      "publication_sha256": "e52c2e43afd8018a89385ceadde739a470ebe8076c26ecee27345a57b233e539"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/migrations/env.py",
+      "repo": "inspect",
+      "path": "civicinspect/migrations/env.py",
+      "sha256": "9612897b28e02e86d1fa5b9ed48d951b76bb5a87151112d0c1cdbe10a0d343e3",
+      "status": "changed",
+      "publication_sha256": "8afa7eadad791cb5a3b8eb9a08e62236bb6124957e5fb7d0e1447b73d871b408"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/migrations/versions/civicinspect_0001_connected.py",
+      "repo": "inspect",
+      "path": "civicinspect/migrations/versions/civicinspect_0001_connected.py",
+      "sha256": "0e71ed311993f45634eb42ba22f5c2b2c4a3854639b221857af76f826d1b68de",
+      "status": "changed",
+      "publication_sha256": "01eaff1bc74366d70c264debce1fe38a341bdc3d769ab0abab7af45abd0cf8f3"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/notice_draft.py",
+      "repo": "inspect",
+      "path": "civicinspect/notice_draft.py",
+      "sha256": "ef44c7d6bcf131bc703f6d0282510fe8a49cc6b5988f6252d01353e15551a2f6",
+      "status": "same",
+      "publication_sha256": "ef44c7d6bcf131bc703f6d0282510fe8a49cc6b5988f6252d01353e15551a2f6"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/persistence.py",
+      "repo": "inspect",
+      "path": "civicinspect/persistence.py",
+      "sha256": "a4c75976a7fe2cc25d2c9a9074eee1a2870eb47bcf6890564d2fb31b113579e3",
+      "status": "changed",
+      "publication_sha256": "a4c75976a7fe2cc25d2c9a9074eee1a2870eb47bcf6890564d2fb31b113579e3"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/public_ui.py",
+      "repo": "inspect",
+      "path": "civicinspect/public_ui.py",
+      "sha256": "c14bd5b3d45dc1434edeffb931cd6abb8804bff675989769c8eb89c85a46f965",
+      "status": "same",
+      "publication_sha256": "c14bd5b3d45dc1434edeffb931cd6abb8804bff675989769c8eb89c85a46f965"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/records_export.py",
+      "repo": "inspect",
+      "path": "civicinspect/records_export.py",
+      "sha256": "6adcb9a04cbff7d9d455f41598a0bdb1dfd736aa13f439a61f1e2ed98f8b49bb",
+      "status": "same",
+      "publication_sha256": "6adcb9a04cbff7d9d455f41598a0bdb1dfd736aa13f439a61f1e2ed98f8b49bb"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/report_draft.py",
+      "repo": "inspect",
+      "path": "civicinspect/report_draft.py",
+      "sha256": "40faeb3103ac9ba5ae45fd74136d5cff0a96c5fa73acb96f4a16a34d1cb7ebd5",
+      "status": "changed",
+      "publication_sha256": "40faeb3103ac9ba5ae45fd74136d5cff0a96c5fa73acb96f4a16a34d1cb7ebd5"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/transcription.py",
+      "repo": "inspect",
+      "path": "civicinspect/transcription.py",
+      "sha256": "0289536c591fa63b6bfa25512444c4a36edc1f160a93d195d3e5aea9e718289f",
+      "status": "new",
+      "publication_sha256": "0289536c591fa63b6bfa25512444c4a36edc1f160a93d195d3e5aea9e718289f"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/workflow_models.py",
+      "repo": "inspect",
+      "path": "civicinspect/workflow_models.py",
+      "sha256": "7f61e6c7bde5b79202b562d9183c5558d5504fe19eda9ed8fe52541d92152377",
+      "status": "changed",
+      "publication_sha256": "8f2a9ee259a26d05c35efa1e63225094934256922e2477337c15ca987119d5e7"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/workflow_schema.py",
+      "repo": "inspect",
+      "path": "civicinspect/workflow_schema.py",
+      "sha256": "2f8638e3319939ce8b3f7b0b1ef59013f3344b8bcaf9be7d1ad6f3bd4b30ac68",
+      "status": "changed",
+      "publication_sha256": "24b9ae035c1527b5ea371027b4a478c3484a71cbf68f847eb53678bb68488470"
+    },
+    {
+      "archive": "installed-owned-source/civicinspect/workflow_store.py",
+      "repo": "inspect",
+      "path": "civicinspect/workflow_store.py",
+      "sha256": "df4ff48879d5f8fe31d71a410a99ed8c359676ab05a267db65e1468cb4764146",
+      "status": "changed",
+      "publication_sha256": "df4ff48879d5f8fe31d71a410a99ed8c359676ab05a267db65e1468cb4764146"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/__init__.py",
+      "sha256": "df9f785737c691127c79ba8fa5a5c1b46526cd0c31e55ab6a2db0fd051f21670",
+      "status": "new",
+      "publication_sha256": "df9f785737c691127c79ba8fa5a5c1b46526cd0c31e55ab6a2db0fd051f21670"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/adapters/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/__init__.py",
+      "sha256": "15c26e4f34c38c002ab513d9ba9a111d54376f9b10e9919ef96258c1ac43ae3b",
+      "status": "new",
+      "publication_sha256": "a31ef24d07f308d407f62b454457fac5e0922303003e8c5d4f842c29dde58198"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/adapters/http_server.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/http_server.py",
+      "sha256": "21668b5f732f63abc1f783ae7080d6fff146904cf927108f42fa377d19b610ba",
+      "status": "new",
+      "publication_sha256": "330db733809e4dd10252b672cb496209fa5d985afd3d0a86754e2b6f5c0e1326"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/adapters/mcp_server.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/mcp_server.py",
+      "sha256": "4e179e239e936e3e1a816605c73b6f8072fae22726fc6c405ac745b156b0b320",
+      "status": "new",
+      "publication_sha256": "4e179e239e936e3e1a816605c73b6f8072fae22726fc6c405ac745b156b0b320"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/adapters/streaming_ws.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/adapters/streaming_ws.py",
+      "sha256": "10c22bfd4dbb75e405cead293456f4ecec083a377d7bb9d5bb45f1db5ba792ab",
+      "status": "new",
+      "publication_sha256": "10c22bfd4dbb75e405cead293456f4ecec083a377d7bb9d5bb45f1db5ba792ab"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/assets/README.md",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/assets/README.md",
+      "sha256": "53a3fdf87fdc0de1fe8f30c6ac75f057931137e51d38000b7f766ded49bb8ea8",
+      "status": "new",
+      "publication_sha256": "53a3fdf87fdc0de1fe8f30c6ac75f057931137e51d38000b7f766ded49bb8ea8"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/cli.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/cli.py",
+      "sha256": "dbd4aad74c2a18de1c86f63b896aa10b55c79188d698e7d21005c632541a7991",
+      "status": "new",
+      "publication_sha256": "1a697f9d27c4ba9935175dd2a974f38807fc698cde0abaa9fbffd0f692d4f0d0"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/__init__.py",
+      "sha256": "073f31f0045a8beb1ead47f496365de57aa351ae911165f22eeab00ec92c7626",
+      "status": "new",
+      "publication_sha256": "7813f116c86a2335c39f393e2d0e0e67fa88b53fb7e97a224e166896ab1e79e1"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/batch.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/batch.py",
+      "sha256": "e2c96eacfcfc96fbe4368d742a45e83e50ad609b82aee6f47d5b2180039bda4c",
+      "status": "new",
+      "publication_sha256": "e2c96eacfcfc96fbe4368d742a45e83e50ad609b82aee6f47d5b2180039bda4c"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/bind.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/bind.py",
+      "sha256": "ef80612788ad6bd2bd4887859f563c611d5bf25294203c18a4108bb9c1185a6a",
+      "status": "new",
+      "publication_sha256": "ef80612788ad6bd2bd4887859f563c611d5bf25294203c18a4108bb9c1185a6a"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/cancel.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/cancel.py",
+      "sha256": "ce053295297acaaa305ec6ec8a3628d7848dccd2d969374ca91956dc27c39f79",
+      "status": "new",
+      "publication_sha256": "a2e135f044c336a7ba0a69965ee0df536b0a551cb7d757585b85d0d9bfe68892"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/checkpoint.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/checkpoint.py",
+      "sha256": "2788443880005d2e0bdb4ffe6bd98c45bf5c47a444a59955bbac65182fc544d2",
+      "status": "new",
+      "publication_sha256": "2788443880005d2e0bdb4ffe6bd98c45bf5c47a444a59955bbac65182fc544d2"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/diarize.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/diarize.py",
+      "sha256": "f8a86b6488e27a6ad345f1bf9d9e17b7283fb97d59c248de97b198e6989a6430",
+      "status": "new",
+      "publication_sha256": "f8a86b6488e27a6ad345f1bf9d9e17b7283fb97d59c248de97b198e6989a6430"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/engine.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/engine.py",
+      "sha256": "5638082ebba71616e8aa9a1657bb0bbf41c162625c7e09178a6318caf2667291",
+      "status": "new",
+      "publication_sha256": "5638082ebba71616e8aa9a1657bb0bbf41c162625c7e09178a6318caf2667291"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/executor.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/executor.py",
+      "sha256": "611c39f727ef82f901538e8163f0ce955ad1e18673de39b1cad8ed6543d8e81a",
+      "status": "new",
+      "publication_sha256": "611c39f727ef82f901538e8163f0ce955ad1e18673de39b1cad8ed6543d8e81a"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/jobs.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/jobs.py",
+      "sha256": "0201d66ce298bea7f1cba6c51a4abcf8c69e4aba1fda252151a5a01ff04f26ef",
+      "status": "new",
+      "publication_sha256": "0201d66ce298bea7f1cba6c51a4abcf8c69e4aba1fda252151a5a01ff04f26ef"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/model.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/model.py",
+      "sha256": "b69da042665e2c2359f4228a3217a9d3e5a130f07d0a0f1874e6de971d700e05",
+      "status": "new",
+      "publication_sha256": "b69da042665e2c2359f4228a3217a9d3e5a130f07d0a0f1874e6de971d700e05"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/paths.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/paths.py",
+      "sha256": "3445077078de184596273f5a573ae920e13085e0899bd7bced516948568d2652",
+      "status": "new",
+      "publication_sha256": "3445077078de184596273f5a573ae920e13085e0899bd7bced516948568d2652"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/pipeline.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/pipeline.py",
+      "sha256": "0b427e8bb4ad1a404d84926cd2b3235e45aa338b264769bc00d6da641886f5e7",
+      "status": "new",
+      "publication_sha256": "0b427e8bb4ad1a404d84926cd2b3235e45aa338b264769bc00d6da641886f5e7"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/privacy.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/privacy.py",
+      "sha256": "1f9d798ae281ff415cd483ba25bfc53ccda80a657cca548ad80ebd2dd38a2b87",
+      "status": "new",
+      "publication_sha256": "1f9d798ae281ff415cd483ba25bfc53ccda80a657cca548ad80ebd2dd38a2b87"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/retrieval.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/retrieval.py",
+      "sha256": "9e6dbad9478a071a6311164f5a4d3fd9990abe74ef274ec95fe8b2f8be85335d",
+      "status": "new",
+      "publication_sha256": "9e6dbad9478a071a6311164f5a4d3fd9990abe74ef274ec95fe8b2f8be85335d"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/runner.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/runner.py",
+      "sha256": "d97799725f67af31c9f8a43bc07c3afa2d62b49aa1df454accdf66c454c28785",
+      "status": "new",
+      "publication_sha256": "d97799725f67af31c9f8a43bc07c3afa2d62b49aa1df454accdf66c454c28785"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/service.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/service.py",
+      "sha256": "d97b38e0640bae6b1abc1edc29fc05eb6638ddc053855a9b6c0aa8e497214446",
+      "status": "new",
+      "publication_sha256": "d97b38e0640bae6b1abc1edc29fc05eb6638ddc053855a9b6c0aa8e497214446"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/sqlite_store.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/sqlite_store.py",
+      "sha256": "aeb0fb42ebc5bbe4e4f2ca5612fafdf3a6123da75c229a46fd35f75faae40d47",
+      "status": "new",
+      "publication_sha256": "aeb0fb42ebc5bbe4e4f2ca5612fafdf3a6123da75c229a46fd35f75faae40d47"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/startup.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/startup.py",
+      "sha256": "fbfd24367deb5c6e4d085578e186c60fc37ec0b53a6e0c2505db76bd57da03ed",
+      "status": "new",
+      "publication_sha256": "fbfd24367deb5c6e4d085578e186c60fc37ec0b53a6e0c2505db76bd57da03ed"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/stream_worker.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/stream_worker.py",
+      "sha256": "70dec8436541d0da13eb40d32b4f7b0672674dae962adb27aad9199b5c990499",
+      "status": "new",
+      "publication_sha256": "70dec8436541d0da13eb40d32b4f7b0672674dae962adb27aad9199b5c990499"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/streaming.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming.py",
+      "sha256": "d2fc7e3968faaec04973f1de843c9b3484ae193cdb610146ef4a93f2335bdb69",
+      "status": "new",
+      "publication_sha256": "d2fc7e3968faaec04973f1de843c9b3484ae193cdb610146ef4a93f2335bdb69"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/streaming_assets.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming_assets.py",
+      "sha256": "9cb2de1b26a2fbb23b09db502165c2f5855b68be67394d8e59c2e5050993dd88",
+      "status": "new",
+      "publication_sha256": "9cb2de1b26a2fbb23b09db502165c2f5855b68be67394d8e59c2e5050993dd88"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/streaming_events.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming_events.py",
+      "sha256": "c95f62973bc256076508c6364b0331628349db2a11e0a04c2dfb232ae3b77eeb",
+      "status": "new",
+      "publication_sha256": "c95f62973bc256076508c6364b0331628349db2a11e0a04c2dfb232ae3b77eeb"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/streaming_process.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/streaming_process.py",
+      "sha256": "4ed1bd70c1ccfce30035042ddbdb5a41081145b61d14363bb42c2b9c7f5bb3ca",
+      "status": "new",
+      "publication_sha256": "4ed1bd70c1ccfce30035042ddbdb5a41081145b61d14363bb42c2b9c7f5bb3ca"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/submission.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/submission.py",
+      "sha256": "951b9a5ab7210775ff6bfc36d11e21840b29bb1ba17a5e87f9e120bfaf87fadf",
+      "status": "new",
+      "publication_sha256": "951b9a5ab7210775ff6bfc36d11e21840b29bb1ba17a5e87f9e120bfaf87fadf"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/timeutil.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/timeutil.py",
+      "sha256": "9c3323fcbeb6393108f61d8cd99d627073828d64994ff26e33dd6d1f2e7537bd",
+      "status": "new",
+      "publication_sha256": "dd3029383015350b18317fcf7ec08c69153eb6d9aa8c110a41972a2c773a1141"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/translate.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/translate.py",
+      "sha256": "3b421a966987e7d429f05cc60d924d7ee7043d21f1d70fd6b9a523a020c06a12",
+      "status": "new",
+      "publication_sha256": "3b421a966987e7d429f05cc60d924d7ee7043d21f1d70fd6b9a523a020c06a12"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/whistle.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/whistle.py",
+      "sha256": "5ea2fb20699ee46e941e783d67448db310bc01a561edfbaf95dc95d9e4396199",
+      "status": "new",
+      "publication_sha256": "5ea2fb20699ee46e941e783d67448db310bc01a561edfbaf95dc95d9e4396199"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/whistle_assets.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/whistle_assets.py",
+      "sha256": "8aedf499b95f8da7fe563db1588ff650a2245a8b97d2e26afbc06979f2d99e48",
+      "status": "new",
+      "publication_sha256": "03dd8755eb2a1fafedbe22f37586be0c07fdbc1898853052b95cb2555a3e8d99"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/core/windows_process.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/core/windows_process.py",
+      "sha256": "ca8c11fb58906f63ee45a2c67b4999a7cb229b64992a5a7512b72bcd78b76a2a",
+      "status": "new",
+      "publication_sha256": "ca8c11fb58906f63ee45a2c67b4999a7cb229b64992a5a7512b72bcd78b76a2a"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/__init__.py",
+      "sha256": "5989cf0be8cfd244ddcf3d8cd512e5538e6ddcaf02fbec61dd81e1c12a14425c",
+      "status": "new",
+      "publication_sha256": "5989cf0be8cfd244ddcf3d8cd512e5538e6ddcaf02fbec61dd81e1c12a14425c"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/_cue_layout.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_cue_layout.py",
+      "sha256": "e849039c37652b9bbd6a7da93555a4de22af142e4dfc47252c0bc7f6cdcda054",
+      "status": "new",
+      "publication_sha256": "e849039c37652b9bbd6a7da93555a4de22af142e4dfc47252c0bc7f6cdcda054"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/_cue_text.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_cue_text.py",
+      "sha256": "09a7cbfff907bf5deba6e14804e1c2d905a00f0bee34a012a8b666fee6df777b",
+      "status": "new",
+      "publication_sha256": "09a7cbfff907bf5deba6e14804e1c2d905a00f0bee34a012a8b666fee6df777b"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/_rename_excl.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_rename_excl.py",
+      "sha256": "313209d1cbc93be245540c6a84eb7bffe88c5ead6c7bee37b211470623ec42c3",
+      "status": "new",
+      "publication_sha256": "313209d1cbc93be245540c6a84eb7bffe88c5ead6c7bee37b211470623ec42c3"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/_rename_noreplace.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/_rename_noreplace.py",
+      "sha256": "3349c5e6e447432eab528e1cd4699e6dc16968b41b1d8c063cfbce45de275c83",
+      "status": "new",
+      "publication_sha256": "3349c5e6e447432eab528e1cd4699e6dc16968b41b1d8c063cfbce45de275c83"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/docx.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/docx.py",
+      "sha256": "f0aa899a4d17e8739dd863e388e240b6379aff365ff8c9a92da0499a446485d5",
+      "status": "new",
+      "publication_sha256": "6f68b5f009bfaafd646c741711d5e2b2eaa1c778c95e8e0339baffb33dcf05f4"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/markdown.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/markdown.py",
+      "sha256": "fb86894bf9ab6ca411ae13737a703fb5d9e0d15298e4387a9767180d894cd5ba",
+      "status": "new",
+      "publication_sha256": "772239958bdaaaf0dda6988f2f43b72bdd853f0d8ab409f9bef73bd2765a5a87"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/pdf.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/pdf.py",
+      "sha256": "bc17222116c14934116d3b32ee4a94d507dbca8329282f7033f9068c27e8b0a4",
+      "status": "new",
+      "publication_sha256": "bc17222116c14934116d3b32ee4a94d507dbca8329282f7033f9068c27e8b0a4"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/srt.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/srt.py",
+      "sha256": "b50c3fcb915386a634336b72f623fd41fc44f1a6cf3a21499e2f874631a9d3f9",
+      "status": "new",
+      "publication_sha256": "b50c3fcb915386a634336b72f623fd41fc44f1a6cf3a21499e2f874631a9d3f9"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/txt.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/txt.py",
+      "sha256": "07c1a16566b5c71346f788eb940263408edc1d6b133ce0909b3cc899d89029ff",
+      "status": "new",
+      "publication_sha256": "07c1a16566b5c71346f788eb940263408edc1d6b133ce0909b3cc899d89029ff"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/render/vtt.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/render/vtt.py",
+      "sha256": "8975154d8968f4700c352571fbc0fc2b39d0b1b6686d06e7d6c366b48e5385cb",
+      "status": "new",
+      "publication_sha256": "8975154d8968f4700c352571fbc0fc2b39d0b1b6686d06e7d6c366b48e5385cb"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/sources/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/__init__.py",
+      "sha256": "b55077d4566dceedb09b84fbe6e3bf2da3f2598affc482ba6157f059204c1d1e",
+      "status": "new",
+      "publication_sha256": "3db5e52f773bfd1079cbfd5162056e6ae863b6c610a304a2a30b2f97240f7171"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/sources/acquire.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/acquire.py",
+      "sha256": "c5ac9a8aad2dbe5ae6b49f52ada34869aef3152faa63f9c4a720e1f09fc05494",
+      "status": "new",
+      "publication_sha256": "c5ac9a8aad2dbe5ae6b49f52ada34869aef3152faa63f9c4a720e1f09fc05494"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/sources/detect.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/detect.py",
+      "sha256": "4bb5ebbaebe3cf3ad71cbf2569640f043ec88d829857f0098df386e6df5ba8bc",
+      "status": "new",
+      "publication_sha256": "4bb5ebbaebe3cf3ad71cbf2569640f043ec88d829857f0098df386e6df5ba8bc"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/sources/scratch.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/sources/scratch.py",
+      "sha256": "35b89fd398d2c1300f9a249c1e70e92637fdffc92450af8ec9ba39fadd457dcb",
+      "status": "new",
+      "publication_sha256": "35b89fd398d2c1300f9a249c1e70e92637fdffc92450af8ec9ba39fadd457dcb"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/__init__.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/__init__.py",
+      "sha256": "57064615e52223f9968d214f30426c4fe4ce1fbca0bd455e953b5a75e190955d",
+      "status": "new",
+      "publication_sha256": "57064615e52223f9968d214f30426c4fe4ce1fbca0bd455e953b5a75e190955d"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/app.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/app.py",
+      "sha256": "d45c15c6e7b7e40f2762b5ad332e1a16feb286fcb089e891b6b37903b9beff59",
+      "status": "new",
+      "publication_sha256": "d45c15c6e7b7e40f2762b5ad332e1a16feb286fcb089e891b6b37903b9beff59"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/capabilities.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/capabilities.py",
+      "sha256": "8beeab8f4036c64fbbc7c656466f5f454594cf39fd8cb8c80c8c05310ba9fa62",
+      "status": "new",
+      "publication_sha256": "8beeab8f4036c64fbbc7c656466f5f454594cf39fd8cb8c80c8c05310ba9fa62"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/cleanup.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/cleanup.py",
+      "sha256": "0296c8e54672966915b9fb20ad999e8dafdde5fd48225bda947d3fb3df07e333",
+      "status": "new",
+      "publication_sha256": "0296c8e54672966915b9fb20ad999e8dafdde5fd48225bda947d3fb3df07e333"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/launcher.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/launcher.py",
+      "sha256": "eb5542ec38eaa9ceed251209b03c273eb76cfa082c930c49c931d85ecb695af1",
+      "status": "new",
+      "publication_sha256": "eb5542ec38eaa9ceed251209b03c273eb76cfa082c930c49c931d85ecb695af1"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/ownership.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/ownership.py",
+      "sha256": "1fb31a271df793d6c406c7e3ede249414eb37333478b87cd52a88169a45e85db",
+      "status": "new",
+      "publication_sha256": "1fb31a271df793d6c406c7e3ede249414eb37333478b87cd52a88169a45e85db"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/paths.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/paths.py",
+      "sha256": "8eedfe456de4b5e14669a3f74367b2a06cf8b9ee2afff37f8df592a81b7af05f",
+      "status": "new",
+      "publication_sha256": "8eedfe456de4b5e14669a3f74367b2a06cf8b9ee2afff37f8df592a81b7af05f"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/security.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/security.py",
+      "sha256": "6b5f6116170d9eb0d0a2ebdd4fb7d1d686fb51b5fcde7d056524d638f2939925",
+      "status": "new",
+      "publication_sha256": "6b5f6116170d9eb0d0a2ebdd4fb7d1d686fb51b5fcde7d056524d638f2939925"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/static/app.css",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/app.css",
+      "sha256": "eb1c492069b035020081946228371e6fabf3fa0525e6c3862da5182c20a2d6b9",
+      "status": "new",
+      "publication_sha256": "eb1c492069b035020081946228371e6fabf3fa0525e6c3862da5182c20a2d6b9"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/static/app.js",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/app.js",
+      "sha256": "6b16b31398514df54fc4932be33cf36f8c465524130f845619f9ebe3dc697d64",
+      "status": "new",
+      "publication_sha256": "6b16b31398514df54fc4932be33cf36f8c465524130f845619f9ebe3dc697d64"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/static/cleanup.js",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/cleanup.js",
+      "sha256": "2660359033e77659a1d4a5b823e8f9d61ab2021deef09e03fadcfc312d0013d7",
+      "status": "new",
+      "publication_sha256": "2660359033e77659a1d4a5b823e8f9d61ab2021deef09e03fadcfc312d0013d7"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/static/index.html",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/index.html",
+      "sha256": "f7dc75c81c6095839922aeea4a91e425c153acffaf69888c06c2949dfd4fffc3",
+      "status": "new",
+      "publication_sha256": "f7dc75c81c6095839922aeea4a91e425c153acffaf69888c06c2949dfd4fffc3"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/static/streaming-capture-worklet.js",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/streaming-capture-worklet.js",
+      "sha256": "0a7d6795ba0ac008f1a172b16c4c7f682f234b350b259fb779fec5df9b441c14",
+      "status": "new",
+      "publication_sha256": "0a7d6795ba0ac008f1a172b16c4c7f682f234b350b259fb779fec5df9b441c14"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/static/streaming-example.html",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/static/streaming-example.html",
+      "sha256": "64a99627e292f1f22af4fe1ef759fbc410e1db5939b732adcb475755fc92ef8f",
+      "status": "new",
+      "publication_sha256": "64a99627e292f1f22af4fe1ef759fbc410e1db5939b732adcb475755fc92ef8f"
+    },
+    {
+      "archive": "installed-owned-source/textflowkit/ui/uploads.py",
+      "repo": "inspect",
+      "path": "inspection-transcriber/src/textflowkit/ui/uploads.py",
+      "sha256": "94da5ebfe1ee50c2101eec09432bb04578cf163cebeedd85ef265290f13235f8",
+      "status": "new",
+      "publication_sha256": "94da5ebfe1ee50c2101eec09432bb04578cf163cebeedd85ef265290f13235f8"
+    }
+  ],
+  "identity_note": "Publication commit integrates the already-built candidate; it is not claimed to be the original signing/build commit. Archive paths retain original byte hashes. Documentation entrypoints have a distribution addendum.",
+  "publication_note": "Original accepted bytes remain in the immutable source companion. Canonical sources normalize line endings. Release integration fixes remove a shadowed duplicate class, position imports for lint, format regression/acceptance tools and resolve the paired Core source dependency. Current audited manuals supersede build-time README copies. Each mapped file records both original and publication byte hashes."
+}
