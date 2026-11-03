@@ -19,8 +19,8 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from civicinspect import main as inspect_main
-from civicinspect.media_analysis import (
+from townlight_inspections import main as inspect_main
+from townlight_inspections.media_analysis import (
     EvidenceRejected,
     analyse_evidence,
     retain_evidence,
@@ -129,7 +129,7 @@ def test_unsupported_media_type_is_rejected():
 
 
 def test_workflow_evidence_model_accepts_raw_audio_and_rejects_bad_hash():
-    from civicinspect.workflow_models import Evidence
+    from townlight_inspections.workflow_models import Evidence
 
     valid = Evidence.model_validate({
         "filename": "voice.wav", "description": "Raw audio", "media_type": "audio/wav",
@@ -246,15 +246,15 @@ def test_inspector_supplied_text_path_is_preserved():
 
 @pytest.fixture
 def client(monkeypatch):
-    monkeypatch.delenv("CIVICINSPECT_CASE_DB_URL", raising=False)
-    monkeypatch.delenv("CIVICINSPECT_VISION_PROVIDER", raising=False)
-    monkeypatch.delenv("CIVICINSPECT_PUBLIC_SOURCES", raising=False)
+    monkeypatch.delenv("TOWNLIGHT_INSPECTIONS_CASE_DB_URL", raising=False)
+    monkeypatch.delenv("TOWNLIGHT_INSPECTIONS_VISION_PROVIDER", raising=False)
+    monkeypatch.delenv("TOWNLIGHT_INSPECTIONS_PUBLIC_SOURCES", raising=False)
     with TestClient(inspect_main.app) as test_client:
         yield test_client
 
 
 def test_api_retains_raw_audio_and_photo_with_hashes(client):
-    response = client.post("/api/v1/civicinspect/evidence/retain", json={"items": [
+    response = client.post("/api/v1/townlight_inspections/evidence/retain", json={"items": [
         {"filename": "inspection-voice.wav", "media_type": "audio/wav",
          "description": "Field voice memo", "content_base64": _b64(VOICE),
          "sha256": DIGESTS["inspection-voice.wav"]["sha256"]},
@@ -271,7 +271,7 @@ def test_api_retains_raw_audio_and_photo_with_hashes(client):
 
 
 def test_api_rejects_tampered_evidence_actionably(client):
-    response = client.post("/api/v1/civicinspect/evidence/retain", json={"items": [
+    response = client.post("/api/v1/townlight_inspections/evidence/retain", json={"items": [
         {"filename": "inspection-voice.wav", "media_type": "audio/wav",
          "description": "Field voice memo", "content_base64": _b64(VOICE),
          "sha256": "0" * 64}]})
@@ -282,7 +282,7 @@ def test_api_rejects_tampered_evidence_actionably(client):
 
 
 def test_api_analysis_without_adapters_is_explicitly_review_required(client):
-    response = client.post("/api/v1/civicinspect/media/analyse", json={"items": [
+    response = client.post("/api/v1/townlight_inspections/media/analyse", json={"items": [
         {"filename": "inspection-photo.png", "media_type": "image/png",
          "description": "Sidewalk", "content_base64": _b64(PHOTO),
          "sha256": DIGESTS["inspection-photo.png"]["sha256"]},
@@ -300,9 +300,9 @@ def test_api_analysis_without_adapters_is_explicitly_review_required(client):
 
 
 def test_api_rejects_unsupported_vision_provider(monkeypatch):
-    monkeypatch.setenv("CIVICINSPECT_VISION_PROVIDER", "not-a-provider")
+    monkeypatch.setenv("TOWNLIGHT_INSPECTIONS_VISION_PROVIDER", "not-a-provider")
     with TestClient(inspect_main.app) as test_client:
-        response = test_client.post("/api/v1/civicinspect/media/analyse", json={"items": [
+        response = test_client.post("/api/v1/townlight_inspections/media/analyse", json={"items": [
             {"filename": "inspection-photo.png", "media_type": "image/png",
              "description": "Sidewalk", "content_base64": _b64(PHOTO),
              "sha256": DIGESTS["inspection-photo.png"]["sha256"]}]})
@@ -311,7 +311,7 @@ def test_api_rejects_unsupported_vision_provider(monkeypatch):
 
 
 def test_existing_reports_draft_route_still_works_with_supplied_text(client):
-    response = client.post("/api/v1/civicinspect/reports/draft", json={
+    response = client.post("/api/v1/townlight_inspections/reports/draft", json={
         "inspection_id": "fictional-1", "property_reference": "fictional parcel",
         "inspector_notes": "Observed a pallet on the sidewalk.",
         "photo_observations": ["Pallet blocking half the walkway."],

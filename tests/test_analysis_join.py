@@ -13,10 +13,10 @@ import json
 
 import pytest
 
-from civicinspect.media_analysis import analyse_evidence, retain_evidence
-from civicinspect.migrations import ready, source_engine, upgrade
-from civicinspect.workflow_models import AnalysisRecord, InspectionInput
-from civicinspect.workflow_store import InspectionRepository
+from townlight_inspections.media_analysis import analyse_evidence, retain_evidence
+from townlight_inspections.migrations import ready, source_engine, upgrade
+from townlight_inspections.workflow_models import AnalysisRecord, InspectionInput
+from townlight_inspections.workflow_store import InspectionRepository
 
 TEXT = "Synthetic Code 4.2: pallets must not block the sidewalk."
 SOURCE = {"source_id": "code:4.2", "title": "Synthetic sidewalk section",

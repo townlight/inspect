@@ -1,6 +1,6 @@
 # GitHub Discussions Seed Posts
 
-<a id="welcome-to-civicinspect"></a>
+<a id="welcome-to-townlight_inspections"></a>
 
 ## Welcome to Townlight Inspections
 

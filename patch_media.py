@@ -14,8 +14,8 @@ Idempotent.
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-models = ROOT / "civicinspect" / "workflow_models.py"
-main = ROOT / "civicinspect" / "main.py"
+models = ROOT / "townlight_inspections" / "workflow_models.py"
+main = ROOT / "townlight_inspections" / "main.py"
 
 # ---- 1. workflow_models.py: accept raw audio -------------------------------
 text = models.read_text(encoding="utf-8")
@@ -45,9 +45,9 @@ if "/evidence/retain" in text:
     print("main.py already patched")
     raise SystemExit(0)
 
-OLD_IMPORTS = '''from civicinspect.integration_mocks import validate_inspection_context_mocks'''
-NEW_IMPORTS = '''from civicinspect.integration_mocks import validate_inspection_context_mocks
-from civicinspect.media_analysis import (
+OLD_IMPORTS = '''from townlight_inspections.integration_mocks import validate_inspection_context_mocks'''
+NEW_IMPORTS = '''from townlight_inspections.integration_mocks import validate_inspection_context_mocks
+from townlight_inspections.media_analysis import (
     EvidenceRejected,
     analyse_evidence,
     retain_evidence,
@@ -78,7 +78,7 @@ class StaffReviewCreateRequest(BaseModel):'''
 assert OLD_MODELS in text
 text = text.replace(OLD_MODELS, NEW_MODELS, 1)
 
-OLD_ROUTES = '''@app.post("/api/v1/civicinspect/notices/draft")'''
+OLD_ROUTES = '''@app.post("/api/v1/townlight_inspections/notices/draft")'''
 NEW_ROUTES = '''def _retain_all(items) -> list:
     retained = []
     for item in items:
@@ -104,7 +104,7 @@ NEW_ROUTES = '''def _retain_all(items) -> list:
 def _analysis_providers() -> dict:
     """Code sources for cited sections, from the configured public source file."""
 
-    raw = os.environ.get("CIVICINSPECT_PUBLIC_SOURCES", "").strip()
+    raw = os.environ.get("TOWNLIGHT_INSPECTIONS_PUBLIC_SOURCES", "").strip()
     if not raw:
         return {}
     import json
@@ -116,7 +116,7 @@ def _analysis_providers() -> dict:
         raise HTTPException(
             status_code=503,
             detail={"message": "Configured inspection Code sources could not be read.",
-                    "fix": "Check CIVICINSPECT_PUBLIC_SOURCES."},
+                    "fix": "Check TOWNLIGHT_INSPECTIONS_PUBLIC_SOURCES."},
         ) from None
     rows = payload.get("sources", []) if isinstance(payload, dict) else payload
     sources = []
@@ -134,24 +134,24 @@ def _analysis_providers() -> dict:
 
 
 def _vision_provider():
-    name = os.environ.get("CIVICINSPECT_VISION_PROVIDER", "").strip()
+    name = os.environ.get("TOWNLIGHT_INSPECTIONS_VISION_PROVIDER", "").strip()
     if not name:
         return None, None
-    from civiccore.llm.factory import build_provider
-    from civiccore.llm.providers.config import AnthropicConfig, OllamaConfig, OpenAIConfig
+    from townlight_core.llm.factory import build_provider
+    from townlight_core.llm.providers.config import AnthropicConfig, OllamaConfig, OpenAIConfig
     schemas = {"ollama": OllamaConfig, "openai": OpenAIConfig, "anthropic": AnthropicConfig}
     schema = schemas.get(name)
     if schema is None:
         raise HTTPException(
             status_code=503,
             detail={"message": f"Configured inspection vision provider '{name}' is not supported.",
-                    "fix": "Set CIVICINSPECT_VISION_PROVIDER to ollama, openai or anthropic."},
+                    "fix": "Set TOWNLIGHT_INSPECTIONS_VISION_PROVIDER to ollama, openai or anthropic."},
         )
-    model = os.environ.get("CIVICINSPECT_VISION_MODEL") or None
+    model = os.environ.get("TOWNLIGHT_INSPECTIONS_VISION_MODEL") or None
     return build_provider(name, schema()), model
 
 
-@app.post("/api/v1/civicinspect/evidence/retain")
+@app.post("/api/v1/townlight_inspections/evidence/retain")
 def retain_evidence_route(request: EvidenceRetainRequest) -> dict[str, object]:
     """Retain original evidence bytes (photos, documents and raw audio) with hashes."""
 
@@ -167,7 +167,7 @@ def retain_evidence_route(request: EvidenceRetainRequest) -> dict[str, object]:
     }
 
 
-@app.post("/api/v1/civicinspect/media/analyse")
+@app.post("/api/v1/townlight_inspections/media/analyse")
 async def media_analyse(request: MediaAnalysisRequest) -> dict[str, object]:
     """Draft-only analysis of retained media; inspector review always required."""
 
@@ -184,7 +184,7 @@ async def media_analyse(request: MediaAnalysisRequest) -> dict[str, object]:
     return result.to_payload()
 
 
-@app.post("/api/v1/civicinspect/notices/draft")'''
+@app.post("/api/v1/townlight_inspections/notices/draft")'''
 assert OLD_ROUTES in text
 text = text.replace(OLD_ROUTES, NEW_ROUTES, 1)
 

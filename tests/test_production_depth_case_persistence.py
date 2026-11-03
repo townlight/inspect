@@ -1,8 +1,8 @@
 from fastapi.testclient import TestClient
 
-import civicinspect.main as main_module
-from civicinspect.main import app
-from civicinspect.persistence import InspectionCaseRepository
+import townlight_inspections.main as main_module
+from townlight_inspections.main import app
+from townlight_inspections.persistence import InspectionCaseRepository
 
 
 client = TestClient(app)
@@ -38,15 +38,15 @@ def test_case_and_report_records_persist(tmp_path) -> None:
 
 def test_api_uses_configured_case_database(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "api-case-records.db"
-    monkeypatch.setenv("CIVICINSPECT_CASE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_INSPECTIONS_CASE_DB_URL", f"sqlite:///{db_path}")
 
     try:
         repeat_response = client.post(
-            "/api/v1/civicinspect/cases/repeat-lookup",
+            "/api/v1/townlight_inspections/cases/repeat-lookup",
             json={"property_reference": "100 Main Street", "violation_type": "nuisance"},
         )
         create_response = client.post(
-            "/api/v1/civicinspect/reports/draft",
+            "/api/v1/townlight_inspections/reports/draft",
             json={
                 "inspection_id": "insp-100",
                 "property_reference": "100 Main Street",
@@ -56,7 +56,7 @@ def test_api_uses_configured_case_database(monkeypatch, tmp_path) -> None:
             },
         )
         report_id = create_response.json()["report_id"]
-        get_response = client.get(f"/api/v1/civicinspect/reports/{report_id}")
+        get_response = client.get(f"/api/v1/townlight_inspections/reports/{report_id}")
     finally:
         main_module._dispose_case_repository()
         main_module._case_db_url = None
@@ -72,24 +72,24 @@ def test_api_uses_configured_case_database(monkeypatch, tmp_path) -> None:
 
 
 def test_report_lookup_requires_configured_database() -> None:
-    response = client.get("/api/v1/civicinspect/reports/not-configured")
+    response = client.get("/api/v1/townlight_inspections/reports/not-configured")
 
     assert response.status_code == 503
-    assert "Set CIVICINSPECT_CASE_DB_URL" in response.json()["detail"]["fix"]
+    assert "Set TOWNLIGHT_INSPECTIONS_CASE_DB_URL" in response.json()["detail"]["fix"]
 
 
 def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "staff-review-records.db"
-    monkeypatch.setenv("CIVICINSPECT_CASE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.setenv("CIVICINSPECT_STAFF_API_KEY", "test-secret")
+    monkeypatch.setenv("TOWNLIGHT_INSPECTIONS_CASE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_INSPECTIONS_STAFF_API_KEY", "test-secret")
     headers = {
-        "X-CivicInspect-Role": "staff",
-        "X-CivicInspect-Staff-Key": "test-secret",
+        "X-Townlight-Inspections-Role": "staff",
+        "X-Townlight-Inspections-Staff-Key": "test-secret",
     }
 
     try:
         create_response = client.post(
-            "/api/v1/civicinspect/staff/reviews",
+            "/api/v1/townlight_inspections/staff/reviews",
             headers=headers,
             json={
                 "inspection_id": "insp-200",
@@ -98,9 +98,9 @@ def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch,
             },
         )
         review_id = create_response.json()["review_id"]
-        list_response = client.get("/api/v1/civicinspect/staff/reviews", headers=headers)
+        list_response = client.get("/api/v1/townlight_inspections/staff/reviews", headers=headers)
         update_response = client.patch(
-            f"/api/v1/civicinspect/staff/reviews/{review_id}",
+            f"/api/v1/townlight_inspections/staff/reviews/{review_id}",
             headers=headers,
             json={
                 "status": "resolved",
@@ -108,7 +108,7 @@ def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch,
                 "resolution": "Supervisor confirmed draft notice boundary.",
             },
         )
-        summary_response = client.get("/api/v1/civicinspect/staff/reviews/summary", headers=headers)
+        summary_response = client.get("/api/v1/townlight_inspections/staff/reviews/summary", headers=headers)
     finally:
         main_module._dispose_case_repository()
         main_module._case_db_url = None
@@ -126,16 +126,16 @@ def test_staff_review_queue_lifecycle_is_staff_gated_and_persistent(monkeypatch,
 
 def test_staff_review_queue_rejects_missing_or_spoofed_staff_key(monkeypatch, tmp_path) -> None:
     db_path = tmp_path / "staff-review-auth.db"
-    monkeypatch.setenv("CIVICINSPECT_CASE_DB_URL", f"sqlite:///{db_path}")
-    monkeypatch.setenv("CIVICINSPECT_STAFF_API_KEY", "test-secret")
+    monkeypatch.setenv("TOWNLIGHT_INSPECTIONS_CASE_DB_URL", f"sqlite:///{db_path}")
+    monkeypatch.setenv("TOWNLIGHT_INSPECTIONS_STAFF_API_KEY", "test-secret")
 
     try:
-        missing_role = client.get("/api/v1/civicinspect/staff/reviews")
+        missing_role = client.get("/api/v1/townlight_inspections/staff/reviews")
         spoofed_key = client.get(
-            "/api/v1/civicinspect/staff/reviews",
+            "/api/v1/townlight_inspections/staff/reviews",
             headers={
-                "X-CivicInspect-Role": "staff",
-                "X-CivicInspect-Staff-Key": "wrong",
+                "X-Townlight-Inspections-Role": "staff",
+                "X-Townlight-Inspections-Staff-Key": "wrong",
             },
         )
     finally:
@@ -143,7 +143,7 @@ def test_staff_review_queue_rejects_missing_or_spoofed_staff_key(monkeypatch, tm
         main_module._case_db_url = None
 
     assert missing_role.status_code == 403
-    assert "X-CivicInspect-Role" in missing_role.json()["detail"]["fix"]
+    assert "X-Townlight-Inspections-Role" in missing_role.json()["detail"]["fix"]
     assert spoofed_key.status_code == 403
-    assert "X-CivicInspect-Staff-Key" in spoofed_key.json()["detail"]["fix"]
+    assert "X-Townlight-Inspections-Staff-Key" in spoofed_key.json()["detail"]["fix"]
     db_path.unlink(missing_ok=True)

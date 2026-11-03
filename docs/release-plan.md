@@ -1,8 +1,8 @@
-<a id="civicinspect-release-plan"></a>
+<a id="townlight_inspections-release-plan"></a>
 
 # Townlight Inspections Release Plan
 
-<a id="1---civicinspect-v100-public-use-module-release"></a>
+<a id="1---townlight_inspections-v100-public-use-module-release"></a>
 
 ## 1 - Townlight Inspections v1.0.0 Public-Use Module Release
 
@@ -22,6 +22,6 @@ Exit criteria:
 - Local tests, docs verifier, lint/static checks, and release verifier pass.
 - GitHub PR merges with green CI.
 - GitHub release `v1.0.0` publishes verified wheel, sdist, and SHA256SUMS artifacts.
-- Townlight suite truth verifies `[civicinspect] PASS 1.0.0` and installer/module-selection evidence on main.
+- Townlight suite truth verifies `[townlight_inspections] PASS 1.0.0` and installer/module-selection evidence on main.
 - Townlight Inspections v1.0.0 source release is verified on main and published with artifacts.
 - Townlight suite truth verifies Townlight Inspections 1.0.0 and installer/module-selection evidence on main.

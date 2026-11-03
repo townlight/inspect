@@ -4,8 +4,8 @@ import tomllib
 
 from fastapi.testclient import TestClient
 
-import civicinspect
-from civicinspect.main import app
+import townlight_inspections
+from townlight_inspections.main import app
 
 
 client = TestClient(app)
@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_package_version_is_100() -> None:
-    assert civicinspect.__version__ == "0.3.0+dev.1"
+    assert townlight_inspections.__version__ == "0.3.0+dev.2"
 
 
 def test_root_endpoint_states_runtime_boundary() -> None:
@@ -21,14 +21,14 @@ def test_root_endpoint_states_runtime_boundary() -> None:
     assert response.status_code == 200
     payload = response.json()
 
-    assert payload["name"] == "CivicInspect"
-    assert payload["version"] == "0.3.0+dev.1"
+    assert payload["name"] == "TownlightInspections"
+    assert payload["version"] == "0.3.0+dev.2"
     assert payload["status"] == "inspection support product with staff review queues"
     assert "staff review queues" in payload["message"]
     assert "Townlight Code context packets" in payload["message"]
     assert "official findings" in payload["message"]
     assert "not implemented" in payload["message"]
-    assert "CIVICINSPECT_STAFF_API_KEY" in payload["next_step"]
+    assert "TOWNLIGHT_INSPECTIONS_STAFF_API_KEY" in payload["next_step"]
 
 
 def test_health_endpoint_reports_versions() -> None:
@@ -37,15 +37,15 @@ def test_health_endpoint_reports_versions() -> None:
     payload = response.json()
 
     assert payload["status"] == "ok"
-    assert payload["service"] == "civicinspect"
-    assert payload["version"] == "0.3.0+dev.1"
+    assert payload["service"] == "townlight_inspections"
+    assert payload["version"] == "0.3.0+dev.2"
     # Reports the Core that is actually imported; the exact published-wheel pin
     # is asserted separately, unchanged, below.
-    import civiccore
+    import townlight_core
 
-    assert payload["civiccore_version"] == civiccore.__version__
+    assert payload["townlight_core_version"] == townlight_core.__version__
     assert re.fullmatch(r"\d+\.\d+\.\d+(\.(dev|post|a|b|rc)\d+)?([.+].*)?",
-                        payload["civiccore_version"])
+                        payload["townlight_core_version"])
 
 
 def test_release_script_prefers_python3_before_python_for_wsl_native_proof() -> None:
@@ -56,15 +56,12 @@ def test_release_script_prefers_python3_before_python_for_wsl_native_proof() -> 
     assert python3_line < python_line
 
 
-def test_pyproject_uses_published_civiccore_release_wheel() -> None:
+def test_pyproject_uses_published_townlight_core_release_wheel() -> None:
     pyproject = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))
 
     dependencies = pyproject["project"]["dependencies"]
-    assert any(
-        dependency
-        == "civiccore @ https://github.com/townlight/core/releases/download/v1.2.1/civiccore-1.2.1-py3-none-any.whl#sha256=8dde29408e206048bde63ec14156a8e6329382af4d16b12710d12aa5c27f3f59"
-        for dependency in dependencies
-    )
+    assert "townlight-core==1.3.0.dev2" in dependencies
+    assert not any("civiccore" in dependency or "@main" in dependency for dependency in dependencies)
     assert pyproject["tool"]["hatch"]["metadata"]["allow-direct-references"] is True
 
 
@@ -80,10 +77,10 @@ def test_docs_index_marks_v1_label_without_mojibake() -> None:
     text = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
 
     assert "Townlight Beta 1" in text
-    assert "0.3.0+dev.1" in text
+    assert "0.3.0+dev.2" in text
     assert "review" in text
     assert "AGPL-3.0" in text
-    assert "Ãƒ" not in text
+    assert "ÃƒÆ’" not in text
 
 
 def test_recovery_status_records_v1_scope() -> None:

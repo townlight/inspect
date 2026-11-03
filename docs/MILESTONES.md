@@ -1,4 +1,4 @@
-<a id="civicinspect-milestones"></a>
+<a id="townlight_inspections-milestones"></a>
 
 # Townlight Inspections Milestones
 
@@ -28,7 +28,7 @@ Records-ready export checklist for municipal inspection case files.
 
 ## Milestone 6 - Public UI
 
-Accessible public sample page at `/civicinspect`.
+Accessible public sample page at `/townlight_inspections`.
 
 ## Milestone 7 - Release
 

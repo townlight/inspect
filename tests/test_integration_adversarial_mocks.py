@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
-from civicinspect.integration_mocks import validate_inspection_context_mocks
-from civicinspect.main import app
+from townlight_inspections.integration_mocks import validate_inspection_context_mocks
+from townlight_inspections.main import app
 
 
 client = TestClient(app)
@@ -30,7 +30,7 @@ def test_adversarial_mock_rejects_spoofed_enforcement_and_live_photo_claims() ->
 
 def test_integration_mock_api_accepts_complete_staff_context_for_review() -> None:
     response = client.post(
-        "/api/v1/civicinspect/integrations/mock/inspection-context",
+        "/api/v1/townlight_inspections/integrations/mock/inspection-context",
         json={
             "scenario": "complete-local-context",
             "role": "staff",
@@ -49,7 +49,7 @@ def test_integration_mock_api_accepts_complete_staff_context_for_review() -> Non
 
 def test_integration_mock_api_blocks_stale_or_partial_context() -> None:
     response = client.post(
-        "/api/v1/civicinspect/integrations/mock/inspection-context",
+        "/api/v1/townlight_inspections/integrations/mock/inspection-context",
         json={
             "scenario": "stale-code-context",
             "role": "service",
@@ -67,7 +67,7 @@ def test_integration_mock_api_blocks_stale_or_partial_context() -> None:
 
 def test_inspection_review_context_carries_code_and_case_references() -> None:
     response = client.post(
-        "/api/v1/civicinspect/context/inspection-review",
+        "/api/v1/townlight_inspections/context/inspection-review",
         json={
             "inspection_id": "insp-100",
             "property_reference": "100 Main Street",
