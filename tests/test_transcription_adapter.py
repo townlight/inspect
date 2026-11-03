@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import pytest
 
-from civicinspect.transcription import (
+from townlight_inspections.transcription import (
     TextFlowKitTranscriptionProvider,
     TranscriptionUnavailable,
 )

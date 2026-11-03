@@ -6,10 +6,10 @@ import json
 import pytest
 from sqlalchemy import text
 
-from civicinspect.connections import SourceUnavailable
-from civicinspect.migrations import ready, source_engine, upgrade
-from civicinspect.workflow_models import InspectionInput
-from civicinspect.workflow_store import Conflict, InspectionRepository
+from townlight_inspections.connections import SourceUnavailable
+from townlight_inspections.migrations import ready, source_engine, upgrade
+from townlight_inspections.workflow_models import InspectionInput
+from townlight_inspections.workflow_store import Conflict, InspectionRepository
 
 
 @pytest.fixture

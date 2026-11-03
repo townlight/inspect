@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to CivicInspect will be documented in this file.
+## [0.3.0+dev.2] - Unreleased naming candidate
+
+- Rename the principal distribution/import to the Townlight Inspections identities and pair with Townlight Core 1.3.0.dev2.
+- Update renamed cross-product consumers and fresh-install schema identities.
+- Fresh-install candidate only; no legacy database upgrade or import shim. Existing data and historical release identities are preserved.
+- Signed Windows installer acceptance and publication remain pending; source implementation is not installed verification.
+
+
+All notable changes to Townlight Inspections will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 

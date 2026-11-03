@@ -1,10 +1,10 @@
 from fastapi.testclient import TestClient
 
-from civicinspect.case_lookup import lookup_repeat_cases
-from civicinspect.main import app
-from civicinspect.notice_draft import draft_notice
-from civicinspect.records_export import build_inspection_export
-from civicinspect.report_draft import draft_inspection_report
+from townlight_inspections.case_lookup import lookup_repeat_cases
+from townlight_inspections.main import app
+from townlight_inspections.notice_draft import draft_notice
+from townlight_inspections.records_export import build_inspection_export
+from townlight_inspections.report_draft import draft_inspection_report
 
 
 client = TestClient(app)
@@ -53,7 +53,7 @@ def test_inspection_export_preserves_records_context() -> None:
 
 def test_repeat_case_lookup_api_success_shape() -> None:
     response = client.post(
-        "/api/v1/civicinspect/cases/repeat-lookup",
+        "/api/v1/townlight_inspections/cases/repeat-lookup",
         json={"property_reference": "100 Main Street", "violation_type": "nuisance"},
     )
     assert response.status_code == 200
@@ -65,7 +65,7 @@ def test_repeat_case_lookup_api_success_shape() -> None:
 
 def test_report_notice_and_export_apis() -> None:
     report = client.post(
-        "/api/v1/civicinspect/reports/draft",
+        "/api/v1/townlight_inspections/reports/draft",
         json={
             "inspection_id": "insp-100",
             "property_reference": "100 Main Street",
@@ -75,7 +75,7 @@ def test_report_notice_and_export_apis() -> None:
         },
     )
     notice = client.post(
-        "/api/v1/civicinspect/notices/draft",
+        "/api/v1/townlight_inspections/notices/draft",
         json={
             "case_id": "case-2026-001",
             "property_reference": "100 Main Street",
@@ -84,7 +84,7 @@ def test_report_notice_and_export_apis() -> None:
         },
     )
     export = client.post(
-        "/api/v1/civicinspect/export",
+        "/api/v1/townlight_inspections/export",
         json={"title": "Inspection packet", "case_id": "case-2026-001"},
     )
     assert report.status_code == 200
@@ -96,7 +96,7 @@ def test_report_notice_and_export_apis() -> None:
 
 
 def test_public_ui_route_is_accessible_and_honest() -> None:
-    response = client.get("/civicinspect")
+    response = client.get("/townlight_inspections")
     assert response.status_code == 200
     assert "text/html" in response.headers["content-type"]
     text = response.text

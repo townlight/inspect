@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# Historical evidence keeps its original identity. These are not current release claims.
 required=(
   "README.md"
   "README.txt"
@@ -29,14 +30,14 @@ required=(
   "MILESTONE_0_7_DONE.md"
   "docs/index.html"
   "pyproject.toml"
-  "civicinspect/__init__.py"
-  "civicinspect/main.py"
-  "civicinspect/case_lookup.py"
-  "civicinspect/integration_mocks.py"
-  "civicinspect/report_draft.py"
-  "civicinspect/notice_draft.py"
-  "civicinspect/records_export.py"
-  "civicinspect/public_ui.py"
+  "townlight_inspections/__init__.py"
+  "townlight_inspections/main.py"
+  "townlight_inspections/case_lookup.py"
+  "townlight_inspections/integration_mocks.py"
+  "townlight_inspections/report_draft.py"
+  "townlight_inspections/notice_draft.py"
+  "townlight_inspections/records_export.py"
+  "townlight_inspections/public_ui.py"
 )
 
 echo "==> Required-artifact check"
@@ -55,7 +56,7 @@ bad_markers=(
   "product ready"
   "production-ready"
   "production ready"
-  "â"
+  "Ã¢"
   "official findings are available"
   "legal advice is available"
   "live GIS is available"

@@ -1,6 +1,6 @@
 # Townlight Inspections Manual
 
-**Townlight Beta 1** · Documentation edition 30 October 2026
+**Townlight Beta 1** · Naming candidate documentation edition 2 November 2026
 
 ## Contents
 
@@ -34,23 +34,22 @@ Staff should begin with First run and Daily workflow. Administrators should also
 
 | Identity | Value |
 | --- | --- |
-| Public documentation identity | Townlight Beta 1 |
-| Installer version | 1.6.0.1 |
-| Product component | civicinspect 0.3.0+dev.1 |
-| Native desktop source version | 1.6.0-1 |
-| Candidate MSI SHA256 | `98bcdef11ebdf5c767f620c904ff49f85115fde3b5c23f62703b111e645aaf86` |
-| Corresponding-source SHA256 | `84a23e1297e42d17b16cfc9e51b2dd78bc46414c0de8ad7ebd2466c1a409d06b` |
+| Documentation | Townlight Beta 1 naming, Access and Notice candidate |
+| Intended installer version | 1.7.0.1; build and acceptance pending |
+| Product component | townlight-inspections 0.3.0+dev.2 |
+| Principal import package | townlight_inspections |
+| Native desktop source version | 1.7.0-1 |
+| Candidate hashes | Pending candidate build, signing and installed acceptance |
 | Current owned software license | AGPL-3.0-only |
-| Supported acceptance profile | Windows x64 fresh install; inspections-preview; separate Station configuration |
+| Acceptance composition | Fresh Windows x64 profile; inspections-preview; Station configured separately |
 
-
-“Townlight Beta 1” identifies this coordinated beta delivery. It does not renumber the installer, native binary, Python packages or historical receipts. Component versions may differ. This documentation is a later companion to unchanged signed bytes, not a rebuilt installer. Historical release pages and manuals describe their own versions and are not the download instructions for this private candidate.
+The naming change advances this package's version and requires a new signed installer and installed acceptance. Those steps and publication remain pending. Historical tags, receipts and archived manuals keep their original names and certify only their identified artifacts. Use an empty database and fresh profile; no in-place legacy upgrade is supported. The approved Windows profile path remains `%LOCALAPPDATA%\CivicSuite`. Preserve existing profiles, data and recovery material.
 
 ## First run
 
 1. Obtain the identified signed private candidate and its corresponding-source companion from the beta coordinator. The landing pages in this documentation are not an installer download service.
-2. On the intended fresh Windows test installation, verify the MSI hash and publisher signature before installing. Preserve unrelated profiles and recovery material. This candidate has fresh-install acceptance; historical in-place upgrades are unverified.
-3. Launch Townlight under the intended named Windows account. Choose the storage folders. Select **Townlight Inspections candidate** (`inspections-preview`) for all eight desktop products. A narrower default selection will not expose all workspaces.
+2. On the intended fresh Windows test installation, verify the MSI hash and publisher signature before installing. Preserve unrelated profiles and recovery material. Installed acceptance for this source candidate remains pending; no in-place legacy upgrade is supported.
+3. Launch Townlight under the intended named Windows account. Choose the storage folders. Select **Townlight Inspections candidate** (`inspections-preview`) for the bounded desktop composition, including Access and Notice. A narrower default selection will not expose all workspaces.
 4. Enter the city profile, time zone and contacts. Create the first named local administrator, sign in and choose protected backup storage. **Continue without local AI** is valid for the deterministic workflows.
 5. Run Health Check and wait for readiness. Open Townlight. In System Health select **Finish Records Migration** to activate the canonical Python/PostgreSQL runtime. Do not fabricate migration receipts or seed accounts.
 6. Create named staff through Settings. Import authorized sources using each product’s source library. All examples in this package are synthetic; they are not municipal authority.
@@ -156,7 +155,7 @@ Use the existing repeat-case lookup or authenticated `POST /desktop/v1/inspectio
 {"property_reference":"Synthetic parcel A"}
 ```
 
-Use the same property reference as the saved synthetic case. The mounted implementation matches the normalized property reference against saved case heads, verifies each revision hash and returns up to 50 entries with entity/revision identity, title and review state, plus `sample_data: false`. Empty results mean no matching retained cases in this store. This is separate from the lower-level `civicinspect.case_lookup.lookup_repeat_cases` helper, which returns sample context and is not the mounted saved-case query. Neither route queries an external enforcement system. Keep any real prior case identity and facts separate from a model's proposed narrative. No GIS capture or external enforcement-system connection is implied.
+Use the same property reference as the saved synthetic case. The mounted implementation matches the normalized property reference against saved case heads, verifies each revision hash and returns up to 50 entries with entity/revision identity, title and review state, plus `sample_data: false`. Empty results mean no matching retained cases in this store. This is separate from the lower-level `townlight_inspections.case_lookup.lookup_repeat_cases` helper, which returns sample context and is not the mounted saved-case query. Neither route queries an external enforcement system. Keep any real prior case identity and facts separate from a model's proposed narrative. No GIS capture or external enforcement-system connection is implied.
 
 ### Prepare an outline for review
 
@@ -166,11 +165,11 @@ The mounted `POST /desktop/v1/inspections/notice-draft` accepts the same `Inspec
 {"title":"Synthetic review","property_reference":"Synthetic parcel A","inspection_reference":"SYN-001","dataset_kind":"fictional","inspector_notes":"Synthetic loose panel observed","photo_observations":["Synthetic panel appears loose"],"voice_notes":"Inspector supplied summary"}
 ```
 
-Inspect the returned draft/outline and its limitations. The lower-level `civicinspect.notice_draft.draft_notice` takes case identity, property reference, violation type and supplied observations. This source helper supplies a reviewable outline; it does not issue a citation, serve notice, choose an official fine or make an enforcement determination. Where no native button exists, technical staff use the current authenticated API rather than an invented screen.
+Inspect the returned draft/outline and its limitations. The lower-level `townlight_inspections.notice_draft.draft_notice` takes case identity, property reference, violation type and supplied observations. This source helper supplies a reviewable outline; it does not issue a citation, serve notice, choose an official fine or make an enforcement determination. Where no native button exists, technical staff use the current authenticated API rather than an invented screen.
 
 Revise the saved case's `notice_draft` only after checking the actual evidence and applicable Code source. Save and record review again; a new revision does not inherit the previous review. The staff packet and separately reviewed Records copy retain their existing audience/exclusion rules. A drafted outline is neither a Records release nor proof that a notice was delivered.
 
-Source contracts: `civicinspect/media_analysis.py`, `case_lookup.py`, `notice_draft.py`, workflow models and `civicsuite_runtime/inspections_bridge.py`.
+Source contracts: `townlight_inspections/media_analysis.py`, `case_lookup.py`, `notice_draft.py`, workflow models and `townlight_runtime/inspections_bridge.py`.
 
 
 ## Technical specifications
@@ -190,24 +189,24 @@ Versioned saves use expected prior revision identifiers where defined. Reopen an
 
 ### Capacity and platform statements
 
-This beta has synthetic single-profile workflow evidence. It does not have a published benchmark for concurrent staff capacity, minimum RAM/CPU, large-source limits or a field SLA. Do not turn a developer machine’s specification into a supported minimum. Installer size is 2,092,122,112 bytes before installation; allow additional disk for extracted runtime, database, originals, exports, media and backups. Select equipment/storage after sizing those actual workloads.
+This beta has synthetic single-profile workflow evidence. It does not have a published benchmark for concurrent staff capacity, minimum RAM/CPU, large-source limits or a field SLA. Do not turn a developer machine’s specification into a supported minimum. The new installer size remains pending its build;  allow additional disk for extracted runtime, database, originals, exports, media and backups. Select equipment/storage after sizing those actual workloads.
 
 The exact [runtime payload lock](docs/beta-1/reference/runtime-payload-lock.json) records pinned files, sizes and hashes. The [component metadata](docs/beta-1/reference/component-metadata.json) records shipped dependency declarations. These references are more precise than a manually copied dependency list. Third-party and historical license notices must accompany their matching payloads.
 
 ## Configuration and administration
 ### Native deployment configuration
 
-Use Setup, Settings and System Health for supported staff operation. Administrators provision folders, backup storage, named accounts and the city profile. Select `inspections-preview` for the full eight-workspace desktop. Station remains a separate service boundary. Do not use a standalone product’s demo server as a substitute for the installed workspace.
+Use Setup, Settings and System Health for supported staff operation. Administrators provision folders, backup storage, named accounts and the city profile. Select `inspections-preview` for the bounded desktop composition, including Access and Notice. Station remains a separate service boundary. Do not use a standalone product’s demo server as a substitute for the installed workspace.
 
-Technical deployments use `TOWNLIGHT_PRODUCT_PROFILE`, `TOWNLIGHT_PROFILE_ROOT`, `DATABASE_URL`, `CIVICSUITE_RUNTIME_PORT`, `PORTAL_MODE` and the runtime-managed secret files. Treat database URLs and native session proofs as secrets. The installed native domain runtime explicitly refuses non-loopback binding. `PORTAL_MODE=private` is the accepted posture; changing it does not by itself commission an internet portal, authentication provider or reverse proxy.
+Technical deployments use `TOWNLIGHT_PRODUCT_PROFILE`, `TOWNLIGHT_PROFILE_ROOT`, `DATABASE_URL`, `TOWNLIGHT_RUNTIME_PORT`, `PORTAL_MODE` and the runtime-managed secret files. Treat database URLs and native session proofs as secrets. The installed native domain runtime explicitly refuses non-loopback binding. `PORTAL_MODE=private` is the accepted posture; changing it does not by itself commission an internet portal, authentication provider or reverse proxy.
 
 The isolated documentation exporter sets a fictional profile and unusable synthetic database origin only to read schemas; those values are not deployment configuration. Keep deployment values in the intended process/account scope. An already-running process does not automatically inherit later environment edits.
 
 ### Optional media analysis configuration
 
-`CIVICINSPECT_VISION_PROVIDER` accepts `ollama`, `openai` or `anthropic`. Select an actually image-capable model through `CIVICINSPECT_VISION_MODEL`; an Ollama endpoint may use `CIVICINSPECT_VISION_BASE_URL`. `CIVICINSPECT_VISION_THINK` accepts true/false/low/medium/high where that configured adapter uses it. Keep provider credentials in protected deployment configuration, never in a source bundle. Missing vision configuration returns unavailable rather than invented observations.
+`TOWNLIGHT_INSPECTIONS_VISION_PROVIDER` accepts `ollama`, `openai` or `anthropic`. Select an actually image-capable model through `TOWNLIGHT_INSPECTIONS_VISION_MODEL`; an Ollama endpoint may use `TOWNLIGHT_INSPECTIONS_VISION_BASE_URL`. `TOWNLIGHT_INSPECTIONS_VISION_THINK` accepts true/false/low/medium/high where that configured adapter uses it. Keep provider credentials in protected deployment configuration, never in a source bundle. Missing vision configuration returns unavailable rather than invented observations.
 
-`CIVICINSPECT_TRANSCRIBER` selects `whistle` or `textflowkit`; the installed candidate provisions the bundled Whistle CPU path. The owning transcriber assets and retained notices must stay with it. A provider result remains an editable draft with original evidence retained. The separate TextFlowKit MCP adapter is not an automatically enabled Townlight server.
+`TOWNLIGHT_INSPECTIONS_TRANSCRIBER` selects `whistle` or `textflowkit`; the installed candidate provisions the bundled Whistle CPU path. The owning transcriber assets and retained notices must stay with it. A provider result remains an editable draft with original evidence retained. The separate TextFlowKit MCP adapter is not an automatically enabled Townlight server.
 
 ## API and integration examples
 ### Native command example
